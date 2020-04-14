@@ -21,6 +21,11 @@ class MapboxGLMap extends React.Component {
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     });
+
+    // const popup = new mapboxgl.Popup({ closeOnClick: false })
+    //   .setLngLat([-122.25, 37.8])
+    //   .setHTML('<h1>Hello World!</h1>')
+    //   .addTo(map);
   }
 
   render() {
