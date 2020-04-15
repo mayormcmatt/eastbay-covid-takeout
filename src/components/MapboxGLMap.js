@@ -1,6 +1,8 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import geojson from '../geoJson.js';
+
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 
@@ -26,8 +28,20 @@ class MapboxGLMap extends React.Component {
     //   .setLngLat([-122.25, 37.8])
     //   .setHTML('<h1>Hello World!</h1>')
     //   .addTo(map);
-  }
 
+    // add markers to map
+    geojson.features.forEach((marker) => {
+      // create a HTML element for each feature
+      const el = document.createElement('div');
+      el.className = 'marker';
+
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+    });
+  }
+    
   render() {
     return (
       <div>
