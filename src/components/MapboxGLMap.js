@@ -22,6 +22,55 @@ class MapboxGLMap extends React.Component {
       zoom: this.state.zoom
     });
 
+    map.on('load', function () {
+      map.addSource('points', {
+        'type': 'geojson',
+        'data': {
+          'type': 'FeatureCollection',
+          'features': [{
+              // feature for Mapbox DC
+              'type': 'Feature',
+              'geometry': {
+                'type': 'Point',
+                'coordinates': [-122.19758, 37.790509]
+              },
+              'properties': {
+                'title': '1 Seafood & Chicken',
+                'icon': 'fast-food'
+              }
+            },
+            {
+              // feature for Mapbox SF
+              'type': 'Feature',
+              'geometry': {
+                'type': 'Point',
+                'coordinates': [-122.200176, 37.793668]
+              },
+              'properties': {
+                'title': '4505 Burgers & BBQ MacArthur',
+                'icon': 'fast-food'
+              }
+            }
+          ]
+        }
+      });
+      map.addLayer({
+        'id': 'points',
+        'type': 'symbol',
+        'source': 'points',
+        'layout': {
+          // get the icon name from the source's "icon" property
+          // concatenate the name to get an icon from the style's sprite sheet
+          'icon-image': ['concat', ['get', 'icon'], '-15'],
+          // get the title name from the source's "title" property
+          // 'text-field': ['get', 'title'],
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-offset': [0, 0.6],
+          'text-anchor': 'top'
+        }
+      });
+    });
+
     // const popup = new mapboxgl.Popup({ closeOnClick: false })
     //   .setLngLat([-122.25, 37.8])
     //   .setHTML('<h1>Hello World!</h1>')
