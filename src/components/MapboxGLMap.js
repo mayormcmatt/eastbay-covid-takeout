@@ -1,59 +1,58 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 
-class MapboxGLMap extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+class MapboxGLMap extends Component {
+  state = {
+    mapState: {
       lng: -122.25,
       lat: 37.8,
       zoom: 11.5
-    };
+    },
+    pointsData: {}
   }
 
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.state.lng, this.state.lat],
-      zoom: this.state.zoom
+      center: [this.state.mapState.lng, this.state.mapState.lat],
+      zoom: this.state.mapState.zoom
     });
 
+    const provideDataPoints = () => {
+      let allLocations = {
+        'type': 'FeatureCollection',
+        'features': []
+      };
+
+      locationData.map((el, i) => {
+        allLocations.features.push({
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [el.long, el.lat]
+          },
+          'properties': {
+            'title': el.name,
+            'icon': 'restaurant'
+          }
+        })
+      });
+
+      return allLocations;
+    }
+
     map.on('load', function () {
+      provideDataPoints();
       map.addSource('points', {
         'type': 'geojson',
-        'data': {
-          'type': 'FeatureCollection',
-          'features': [{
-              // feature for Mapbox DC
-              'type': 'Feature',
-              'geometry': {
-                'type': 'Point',
-                'coordinates': [-122.19758, 37.790509]
-              },
-              'properties': {
-                'title': '1 Seafood & Chicken',
-                'icon': 'fast-food'
-              }
-            },
-            {
-              // feature for Mapbox SF
-              'type': 'Feature',
-              'geometry': {
-                'type': 'Point',
-                'coordinates': [-122.200176, 37.793668]
-              },
-              'properties': {
-                'title': '4505 Burgers & BBQ MacArthur',
-                'icon': 'fast-food'
-              }
-            }
-          ]
-        }
+        'data': provideDataPoints()
       });
+
       map.addLayer({
         'id': 'points',
         'type': 'symbol',

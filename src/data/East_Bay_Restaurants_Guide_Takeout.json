@@ -685,8 +685,8 @@
   },
   {
     "name": "Cholita Linda",
-    "cuisine": ""Latin American"",
-    "takout_option": "takeout and delivery (DoorDash," Uber Eats)"",
+    "cuisine": "Latin American",
+    "takout_option": "takeout and delivery (DoorDash, Uber Eats)",
     "street": "1337 Park St.",
     "city": "Alameda",
     "phone": "510-648-3839",
@@ -697,8 +697,8 @@
   },
   {
     "name": "Cholita Linda",
-    "cuisine": "Latin"-American"",
-    "takout_option": "takeout and delivery (Postmates, Cavia"r, ChowNow)"",
+    "cuisine": "Latin-American",
+    "takout_option": "takeout and delivery (Postmates, Caviar, ChowNow)",
     "street": "4923 Telegraph Ave",
     "city": "Oakland",
     "phone": "510-594-7610",
@@ -816,14 +816,14 @@
     "coords": "37.82683,-122.210783"
   },
   {
-    "name": ""Degrees Plato"",
-    "cuisine":" "Mexican"",
+    "name": "Degrees Plato",
+    "cuisine":"Mexican",
     "takout_option": "takeout",
     "street": "4251 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-479-3366",
-    "website": "Degrees-Plato-Tap-Room-Bottle-Shop-Kitchen.business".site."",
-    "lat": "3"7.787583"",
+    "website": "https://www.degreesplato.com/",
+    "lat": "37.787583",
     "long": "-122.195386",
     "coords": "37.787583,-122.195386"
   },
