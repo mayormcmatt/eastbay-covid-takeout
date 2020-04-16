@@ -71,6 +71,7 @@ class App extends Component {
           // get the icon name from the source's "icon" property
           // concatenate the name to get an icon from the style's sprite sheet
           'icon-image': ['concat', ['get', 'icon'], '-15'],
+          'icon-size': 1.2,
           'icon-allow-overlap': true,
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
