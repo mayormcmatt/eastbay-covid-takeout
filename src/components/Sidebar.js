@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/sidebar.scss';
 
 class Takeout extends Component {
   render() {
