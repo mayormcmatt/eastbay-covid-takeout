@@ -1,11 +1,12 @@
-import React, { Component, useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
+import React, { Component } from 'react';
+import mapboxgl, { Marker } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import '../styles/app.scss';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 
-class MapboxGLMap extends Component {
+class App extends Component {
   state = {
     mapState: {
       lng: -122.25,
@@ -29,7 +30,7 @@ class MapboxGLMap extends Component {
         'features': []
       };
 
-      locationData.map((el, i) => {
+      locationData.map((el) => {
         allLocations.features.push({
           'type': 'Feature',
           'geometry': {
@@ -53,7 +54,6 @@ class MapboxGLMap extends Component {
     }
 
     map.on('load', function () {
-      provideDataPoints();
       map.addSource('points', {
         'type': 'geojson',
         'data': provideDataPoints()
@@ -67,8 +67,6 @@ class MapboxGLMap extends Component {
           // get the icon name from the source's "icon" property
           // concatenate the name to get an icon from the style's sprite sheet
           'icon-image': ['concat', ['get', 'icon'], '-15'],
-          // get the title name from the source's "title" property
-          // 'text-field': ['get', 'title'],
           'icon-allow-overlap': true,
           'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
           'text-offset': [0, 0.6],
@@ -80,9 +78,6 @@ class MapboxGLMap extends Component {
         let coordinates = e.features[0].geometry.coordinates.slice();
         let info = e.features[0].properties.info;
 
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
@@ -119,4 +114,4 @@ class MapboxGLMap extends Component {
   }
 }
 
-export default MapboxGLMap;
+export default App;
