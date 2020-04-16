@@ -2,6 +2,7 @@ import React, { Component, useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
+import Sidebar from '../components/Sidebar.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 
@@ -12,7 +13,7 @@ class MapboxGLMap extends Component {
       lat: 37.8,
       zoom: 13
     },
-    pointsData: {}
+    pointsData: []
   }
 
   componentDidMount() {
@@ -44,11 +45,14 @@ class MapboxGLMap extends Component {
               <p><strong>Address:</strong> ${el.street} ${el.city}</p>
               <p><strong>Phone:</strong> ${el.phone}</p>
               <p><a href=${el.website} target=_blank>${el.website}</a></p>`,
+            'name': el.name,
+            'cuisine': el.cuisine,
+            'website': el.website,
             'icon': 'restaurant'
           }
         })
       });
-
+      this.setState({pointsData: allLocations.features});
       return allLocations;
     }
 
@@ -112,8 +116,9 @@ class MapboxGLMap extends Component {
 
   render() {
     return (
-      <div>
+      <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
+        <Sidebar data={this.state.pointsData}/>
       </div>
     )
   }

@@ -1,3 +1,44 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .mapContainer {
   height: 100vh;
+  width: 65vw;
+}
+
+.map-sidebar-container{
+  display: flex;
+}
+
+.sidebar {
+  background-color: #14181d;
+  padding: 2rem;
+  width: 35vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.takeout {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #404442 ;
+}
+
+.takeout h3 {
+  font-size: 1.8rem;
+  color: #27c375;
+}
+
+.takeout p {
+  color: white;
+}
+
+.takeout a {
+  font-size: .8rem;
+  color: #abb7b1;
+}
+
+.takeout hr {
+  border-color: #27c375;
+  opacity: .3;
 }
