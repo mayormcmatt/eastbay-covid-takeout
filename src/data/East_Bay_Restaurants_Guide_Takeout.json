@@ -6,7 +6,7 @@
     "street": "4014 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-482-1255",
-    "website": "Zmenu.com/1-seafood-and-chicken-restaurant-oakland-online-menu.",
+    "website": "https://www.Zmenu.com/1-seafood-and-chicken-restaurant-oakland-online-meu.",
     "lat": "37.790509",
     "long": "-122.19758",
     "coords": "37.790509,-122.19758"
@@ -18,7 +18,7 @@
     "street": "3506 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-210-8235",
-    "website": "4505burgersandbbq.com.",
+    "website": "https://www.4505burgersandbbq.com",
     "lat": "37.793668",
     "long": "-122.200176",
     "coords": "37.793668,-122.200176"
@@ -30,7 +30,7 @@
     "street": "900 Grayson St.",
     "city": "Berkeley",
     "phone": "510-704-9900",
-    "website": "900grayson.com.",
+    "website": "https://www.900grayson.com",
     "lat": "37.855148",
     "long": "-122.292186",
     "coords": "37.855148,-122.292186"
@@ -66,7 +66,7 @@
     "street": "1132 Ballena Blvd.",
     "city": "Alameda",
     "phone": "510-523-5500",
-    "website": "AbigailsAlameda.com.",
+    "website": "https://www.AbigailsAlameda.com",
     "lat": "37.766245",
     "long": "-122.287973",
     "coords": "37.766245,-122.287973"
@@ -78,7 +78,7 @@
     "street": "362 17th St.",
     "city": "Oakland",
     "phone": "510-502-7743",
-    "website": "aburayaOakland.com.",
+    "website": "https://www.aburayaOakland.com",
     "lat": "37.805955",
     "long": "-122.267561",
     "coords": "37.805955,-122.267561"
@@ -102,7 +102,7 @@
     "street": "2135 Franklin St.",
     "city": "Oakland",
     "phone": "510-288-3668",
-    "website": "AgaveUptown.com.",
+    "website": "https://www.AgaveUptown.com",
     "lat": "37.81031",
     "long": "-122.26684",
     "coords": "37.81031,-122.26684"
@@ -114,7 +114,7 @@
     "street": "1730 Shattuck Ave.",
     "city": "Berkeley",
     "phone": "510-848-8748",
-    "website": "AgrodolceBerkeley.com.",
+    "website": "https://www.AgrodolceBerkeley.com",
     "lat": "37.875955",
     "long": "-122.269079",
     "coords": "37.875955,-122.269079"
@@ -126,7 +126,7 @@
     "street": "1888 Solano Ave.",
     "city": "Albany",
     "phone": "510- 526-4373",
-    "website": "AjantaRestaurant.com.",
+    "website": "https://www.AjantaRestaurant.com",
     "lat": "37.891226",
     "long": "-122.277389",
     "coords": "37.891226,-122.277389"
@@ -138,7 +138,7 @@
     "street": "1603 Second Ave.",
     "city": "Oakland",
     "phone": "",
-    "website": "Info@getcoffee.today.",
+    "website": "https://www.Info@getcoffee.today",
     "lat": "37.79933",
     "long": "-122.254816",
     "coords": "37.79933,-122.254816"
@@ -150,7 +150,7 @@
     "street": "100 Grand Ave.",
     "city": "Oakland",
     "phone": "510-907-7555",
-    "website": "alaMarOakland.com.",
+    "website": "https://www.alaMarOakland.com",
     "lat": "37.811617",
     "long": "-122.265421",
     "coords": "37.811617,-122.265421"
@@ -186,7 +186,7 @@
     "street": "1640 Park St.",
     "city": "Alameda",
     "phone": "510-263-8788",
-    "website": "AngelasAlameda.com.",
+    "website": "https://www.AngelasAlameda.com",
     "lat": "37.767375",
     "long": "-122.239926",
     "coords": "37.767375,-122.239926"
@@ -198,7 +198,7 @@
     "street": "948 Clay St.",
     "city": "Oakland",
     "phone": "510-250-9696",
-    "website": "AnnapurnaOakland.com.",
+    "website": "https://www.AnnapurnaOakland.com",
     "lat": "37.802247",
     "long": "-122.275207",
     "coords": "37.802247,-122.275207"
@@ -210,7 +210,7 @@
     "street": "2508 Santa Clara Ave.",
     "city": "Alameda",
     "phone": "510-521-4100",
-    "website": "AsenaRestaurant.com.",
+    "website": "https://www.AsenaRestaurant.com",
     "lat": "37.76412",
     "long": "-122.239767",
     "coords": "37.76412,-122.239767"
@@ -222,7 +222,7 @@
     "street": "5020 Telegraph Ave",
     "city": "Oakland",
     "phone": "510-547-5100",
-    "website": "AsmaraRestaurant.com.",
+    "website": "https://www.AsmaraRestaurant.com",
     "lat": "37.836761",
     "long": "-122.262368",
     "coords": "37.836761,-122.262368"
@@ -234,7 +234,7 @@
     "street": "2327 Blanding Ave.",
     "city": "Alameda",
     "phone": "510-522-7575",
-    "website": "ATownpizza.net.",
+    "website": "https://www.ATownpizza.net",
     "lat": "37.771232",
     "long": "-122.237958",
     "coords": "37.771232,-122.237958"
@@ -246,7 +246,7 @@
     "street": "4640 Telegraph Ave",
     "city": "Oakland",
     "phone": "510-601-9227",
-    "website": "AuntMarysCafe.com.",
+    "website": "https://www.AuntMarysCafe.com",
     "lat": "37.833928",
     "long": "-122.26312",
     "coords": "37.833928,-122.26312"
@@ -258,7 +258,7 @@
     "street": "1429 Broadway",
     "city": "Oakland",
     "phone": "510-863-1440",
-    "website": "AwakenCafe.com.",
+    "website": "https://www.AwakenCafe.com",
     "lat": "37.804675",
     "long": "-122.271208",
     "coords": "37.804675,-122.271208"
@@ -270,7 +270,7 @@
     "street": "4390 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-250-9988",
-    "website": "AzitOakland.com.",
+    "website": "https://www.AzitOakland.com",
     "lat": "37.832104",
     "long": "-122.263088",
     "coords": "37.832104,-122.263088"
@@ -282,7 +282,7 @@
     "street": "358 11th St.",
     "city": "Oakland",
     "phone": "510-251-0888",
-    "website": "BabyCafeRestaurants.com.",
+    "website": "https://www.BabyCafeRestaurants.com",
     "lat": "37.801523",
     "long": "-122.270199",
     "coords": "37.801523,-122.270199"
@@ -294,7 +294,7 @@
     "street": "11880 San Pablo Ave.",
     "city": "El Cerrito",
     "phone": "510-680-5590",
-    "website": "BananaLeafElCerrito.com.",
+    "website": "https://www.BananaLeafElCerrito.com",
     "lat": "37.929312",
     "long": "-122.321012",
     "coords": "37.929312,-122.321012"
@@ -306,7 +306,7 @@
     "street": "1916 Franklin St.",
     "city": "Oakland",
     "phone": "510-832-3298",
-    "website": "BayFungTongTeaHouse.com.",
+    "website": "https://www.BayFungTongTeaHouse.com",
     "lat": "37.80747",
     "long": "-122.267253",
     "coords": "37.80747,-122.267253"
@@ -318,7 +318,7 @@
     "street": "2225 Webster St.",
     "city": "Oakland",
     "phone": "510-419-0673",
-    "website": "BayGreenSalad.com.",
+    "website": "https://www.BayGreenSalad.com",
     "lat": "37.811098",
     "long": "-122.265684",
     "coords": "37.811098,-122.265684"
@@ -330,7 +330,7 @@
     "street": "55 Webster St.",
     "city": "Oakland",
     "phone": "510-281-0998",
-    "website": "Belcampo.com/restaurant/oakland-restaurant-butcher-shop.",
+    "website": "https://www.Belcampo.com/restaurant/oakland-restaurant-butcher-shop",
     "lat": "37.810695",
     "long": "-122.265782",
     "coords": "37.810695,-122.265782"
@@ -342,7 +342,7 @@
     "street": "4238 Park Blvd.",
     "city": "Oakland",
     "phone": "510-336-1180",
-    "website": "Bellanico.net.",
+    "website": "https://www.Bellanico.net",
     "lat": "37.807486",
     "long": "-122.221564",
     "coords": "37.807486,-122.221564"
@@ -354,7 +354,7 @@
     "street": "1901 San Pablo Ave.",
     "city": "Oakland",
     "phone": "510-839-0000",
-    "website": "BellyUptown.com.",
+    "website": "https://www.BellyUptown.com",
     "lat": "37.809177",
     "long": "-122.273187",
     "coords": "37.809177,-122.273187"
@@ -366,7 +366,7 @@
     "street": "5403 College Ave",
     "city": "Oakland",
     "phone": "510-788-7890",
-    "website": "Belottirb.com.",
+    "website": "https://www.Belottirb.com",
     "lat": "37.840168",
     "long": "-122.251566",
     "coords": "37.840168,-122.251566"
@@ -390,7 +390,7 @@
     "street": "339 Ninth St.",
     "city": "Oakland",
     "phone": "510-839-3188",
-    "website": "BigDish2011.blogspot.com.",
+    "website": "https://www.BigDish2011.blogspot.com",
     "lat": "37.799719",
     "long": "-122.270648",
     "coords": "37.799719,-122.270648"
@@ -414,7 +414,7 @@
     "street": "4045 Broadway",
     "city": "Oakland",
     "phone": "510-929-0510",
-    "website": "BrendasOakland.com.",
+    "website": "https://www.BrendasOakland.com",
     "lat": "37.828324",
     "long": "-122.256622",
     "coords": "37.828324,-122.256622"
@@ -426,7 +426,7 @@
     "street": "375 40th St.",
     "city": "Oakland",
     "phone": "510-788-4698",
-    "website": "BrotzeitBiergarten.com.",
+    "website": "https://www.BrotzeitBiergarten.com",
     "lat": "37.827944",
     "long": "-122.259117",
     "coords": "37.827944,-122.259117"
@@ -438,7 +438,7 @@
     "street": "2295 Broadway",
     "city": "Oakland",
     "phone": "510-839-7685",
-    "website": "BrownSugarKitchen.com.",
+    "website": "https://www.BrownSugarKitchen.com",
     "lat": "37.812195",
     "long": "-122.266617",
     "coords": "37.812195,-122.266617"
@@ -450,7 +450,7 @@
     "street": "4721 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-652-2900",
-    "website": "BurmaInc.com.",
+    "website": "https://www.BurmaInc.com",
     "lat": "37.834748",
     "long": "-122.263191",
     "coords": "37.834748,-122.263191"
@@ -462,7 +462,7 @@
     "street": "1345 Park St.",
     "city": "Alameda",
     "phone": "510-522-6200",
-    "website": "burmasuperstar.com",
+    "website": "https://www.burmasuperstar.co",
     "lat": "37.763694",
     "long": "-122.243435",
     "coords": "37.763694,-122.243435"
@@ -498,7 +498,7 @@
     "street": "5642 College Ave",
     "city": "Oakland",
     "phone": "510-658-6180",
-    "website": "CactusTaqueria.com.",
+    "website": "https://www.CactusTaqueria.com",
     "lat": "37.843947",
     "long": "-122.25138",
     "coords": "37.843947,-122.25138"
@@ -510,7 +510,7 @@
     "street": "6427 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-601-7999",
-    "website": "CafeColucci.com.",
+    "website": "https://www.CafeColucci.com",
     "lat": "37.850732",
     "long": "-122.260793",
     "coords": "37.850732,-122.260793"
@@ -522,7 +522,7 @@
     "street": "1500 Webster St.",
     "city": "Alameda",
     "phone": "510-523-4500",
-    "website": "CafeJolies.com.",
+    "website": "https://www.CafeJolies.com",
     "lat": "37.77348",
     "long": "-122.276638",
     "coords": "37.77348,-122.276638"
@@ -534,7 +534,7 @@
     "street": "1158 Solano Ave.",
     "city": "Albany",
     "phone": "510-524-5667",
-    "website": "CafeRajOnline.com.",
+    "website": "https://www.CafeRajOnline.com",
     "lat": "37.890206",
     "long": "-122.29682",
     "coords": "37.890206,-122.29682"
@@ -546,7 +546,7 @@
     "street": "4100 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-842-3027",
-    "website": "CafeSantanaRoastingCompany.com.",
+    "website": "https://www.CafeSantanaRoastingCompany.com",
     "lat": "37.789655",
     "long": "-122.196537",
     "coords": "37.789655,-122.196537"
@@ -558,7 +558,7 @@
     "street": "2224 MacArthur Blvd.",
     "city": "Oakland.",
     "phone": "510-646-2394",
-    "website": "CafeUmami.com.",
+    "website": "https://www.CafeUmami.com",
     "lat": "37.800371",
     "long": "-122.215987",
     "coords": "37.800371,-122.215987"
@@ -570,7 +570,7 @@
     "street": "4045 Piedmont Ave",
     "city": "Oakland",
     "phone": "510-658-2744",
-    "website": "CaffeChiave.com.",
+    "website": "https://www.CaffeChiave.com",
     "lat": "37.826171",
     "long": "-122.25306",
     "coords": "37.826171,-122.25306"
@@ -582,7 +582,7 @@
     "street": "1445 Webster St.",
     "city": "Alameda",
     "phone": "510-522-2996",
-    "website": "CalafiaTaqueria.com",
+    "website": "https://www.CalafiaTaqueria.co",
     "lat": "37.772843",
     "long": "-122.276971",
     "coords": "37.772843,-122.276971"
@@ -594,7 +594,7 @@
     "street": "2337 Broadway",
     "city": "Oakland",
     "phone": "510-338-3273",
-    "website": "CalaveraOakland.com.",
+    "website": "https://www.CalaveraOakland.com",
     "lat": "37.812956",
     "long": "-122.266458",
     "coords": "37.812956,-122.266458"
@@ -606,7 +606,7 @@
     "street": "3891 Piedmont Ave",
     "city": "Oakland",
     "phone": "510-655-3349",
-    "website": "CatosAlehouse.com.",
+    "website": "https://www.CatosAlehouse.com",
     "lat": "37.825051",
     "long": "-122.254676",
     "coords": "37.825051,-122.254676"
@@ -618,7 +618,7 @@
     "street": "411 26th St.",
     "city": "Oakland",
     "phone": "510-301-5142",
-    "website": "CCWBarAndRestaurant.com.",
+    "website": "https://www.CCWBarAndRestaurant.com",
     "lat": "37.814946",
     "long": "-122.266612",
     "coords": "37.814946,-122.266612"
@@ -630,7 +630,7 @@
     "street": "1332 Park St.",
     "city": "Alameda",
     "phone": "510-769-4828",
-    "website": "CeraUnaVolta.us.",
+    "website": "https://www.CeraUnaVolta.us",
     "lat": "37.763287",
     "long": "-122.243394",
     "coords": "37.763287,-122.243394"
@@ -642,7 +642,7 @@
     "street": "2102 Eighth Ave",
     "city": "Oakland",
     "phone": "510-238-8819",
-    "website": "ChampaGardenRestaurant.com.",
+    "website": "https://www.ChampaGardenRestaurant.com",
     "lat": "37.798143",
     "long": "-122.244606",
     "coords": "37.798143,-122.244606"
@@ -654,7 +654,7 @@
     "street": "303a Oakland Ave.",
     "city": "Oakland",
     "phone": "510-735-9748",
-    "website": "ChicaOakland.com.",
+    "website": "https://www.ChicaOakland.com",
     "lat": "37.816688",
     "long": "-122.257355",
     "coords": "37.816688,-122.257355"
@@ -666,7 +666,7 @@
     "street": "399 Eighth St.",
     "city": "Oakland",
     "phone": "510-836-2988",
-    "website": "ChinaStarOakland.com.",
+    "website": "https://www.ChinaStarOakland.com",
     "lat": "37.799576",
     "long": "-122.272586",
     "coords": "37.799576,-122.272586"
@@ -678,7 +678,7 @@
     "street": "1335 Solano Ave",
     "city": "Albany",
     "phone": "510-525-2285",
-    "website": "ChinaVillageAlbany.com.",
+    "website": "https://www.ChinaVillageAlbany.com",
     "lat": "37.890881",
     "long": "-122.291154",
     "coords": "37.890881,-122.291154"
@@ -702,7 +702,7 @@
     "street": "4923 Telegraph Ave",
     "city": "Oakland",
     "phone": "510-594-7610",
-    "website": "Cholitalinda.com.",
+    "website": "https://www.Cholitalinda.com",
     "lat": "37.836103",
     "long": "-122.262821",
     "coords": "37.836103,-122.262821"
@@ -714,7 +714,7 @@
     "street": "2301 Central Ave.",
     "city": "Alameda",
     "phone": "510-769-2000",
-    "website": "AlamedaCinemaGrill.com.",
+    "website": "https://www.AlamedaCinemaGrill.com",
     "lat": "37.764883",
     "long": "-122.244196",
     "coords": "37.764883,-122.244196"
@@ -726,7 +726,7 @@
     "street": "261 10th St. A",
     "city": "Oakland",
     "phone": "510-250-9333",
-    "website": "ClassicGuilinRiceNoodles.com.",
+    "website": "https://www.ClassicGuilinRiceNoodles.com",
     "lat": "37.799679",
     "long": "-122.268793",
     "coords": "37.799679,-122.268793"
@@ -738,7 +738,7 @@
     "street": "3936 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-891-1232",
-    "website": "CoNamRestaurants.com.",
+    "website": "https://www.CoNamRestaurants.com",
     "lat": "37.828829",
     "long": "-122.264262",
     "coords": "37.828829,-122.264262"
@@ -750,7 +750,7 @@
     "street": "4171 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-482-2114",
-    "website": "Communite-table.com.",
+    "website": "https://www.Communite-table.com",
     "lat": "37.788582",
     "long": "-122.196286",
     "coords": "37.788582,-122.196286"
@@ -762,7 +762,7 @@
     "street": "3340 Grand Ave",
     "city": "Oakland",
     "phone": "510-839-4986",
-    "website": "conniescantina.com.",
+    "website": "https://www.conniescantina.com",
     "lat": "37.813453",
     "long": "-122.246687",
     "coords": "37.813453,-122.246687"
@@ -774,7 +774,7 @@
     "street": "4031 Broadway",
     "city": "Oakland",
     "phone": "510-879-7061",
-    "website": "CopperSpoonOakland.com.",
+    "website": "https://www.CopperSpoonOakland.com",
     "lat": "37.828152",
     "long": "-122.256737",
     "coords": "37.828152,-122.256737"
@@ -786,7 +786,7 @@
     "street": "1745 San Pablo Ave.",
     "city": "Oakland",
     "phone": "510-858-7475",
-    "website": "CurryUpNow.com.",
+    "website": "https://www.CurryUpNow.com",
     "lat": "37.807452",
     "long": "-122.27255",
     "coords": "37.807452,-122.27255"
@@ -798,7 +798,7 @@
     "street": "4301 Telegraph Ave",
     "city": "Oakland",
     "phone": "510-601-6001",
-    "website": "DaolTofu.com.",
+    "website": "https://www.DaolTofu.com",
     "lat": "37.831732",
     "long": "-122.264119",
     "coords": "37.831732,-122.264119"
@@ -810,7 +810,7 @@
     "street": "6118 Medau Pl.",
     "city": "Oakland",
     "phone": "510-823-2354",
-    "website": "DaughterThai.com.",
+    "website": "https://www.DaughterThai.com",
     "lat": "37.82683",
     "long": "-122.210783",
     "coords": "37.82683,-122.210783"
@@ -822,7 +822,7 @@
     "street": "4251 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-479-3366",
-    "website": "https://www.degreesplato.com/",
+    "website": "https://www.https://www.degreesplato.com",
     "lat": "37.787583",
     "long": "-122.195386",
     "coords": "37.787583,-122.195386"
@@ -834,7 +834,7 @@
     "street": "1373 Solano Ave.",
     "city": "Albany",
     "phone": "510-528-5000",
-    "website": "DelhiDiner.net.",
+    "website": "https://www.DelhiDiner.net",
     "lat": "37.89092",
     "long": "-122.290668",
     "coords": "37.89092,-122.290668"
@@ -846,7 +846,7 @@
     "street": "1437 Franklin St.",
     "city": "Oakland",
     "phone": "510-836-4444",
-    "website": "DeliciousCurryHouse.com.",
+    "website": "https://www.DeliciousCurryHouse.com",
     "lat": "37.804819",
     "long": "-122.269549",
     "coords": "37.804819,-122.269549"
@@ -858,7 +858,7 @@
     "street": "2635 Ashby Ave.",
     "city": "Berkeley",
     "phone": "510-838-1131",
-    "website": "DonatoAndCo.com.",
+    "website": "https://www.DonatoAndCo.com",
     "lat": "37.857224",
     "long": "-122.253643",
     "coords": "37.857224,-122.253643"
@@ -870,7 +870,7 @@
     "street": "4293 Piedmont Ave",
     "city": "Oakland",
     "phone": "510-652-3676",
-    "website": "DopoAdesso.com.",
+    "website": "https://www.DopoAdesso.com",
     "lat": "37.828887",
     "long": "-122.249555",
     "coords": "37.828887,-122.249555"
@@ -882,7 +882,7 @@
     "street": "2301 Broadway",
     "city": "Oakland",
     "phone": "510-285-6823",
-    "website": "dosaByDOSA.com.",
+    "website": "https://www.dosaByDOSA.com",
     "lat": "37.812384",
     "long": "-122.266631",
     "coords": "37.812384,-122.266631"
@@ -894,7 +894,7 @@
     "street": "102 Frank H. Ogawa Plaza",
     "city": "Oakland",
     "phone": "510-250-9110",
-    "website": "DowntownWineMerchants.com.",
+    "website": "https://www.DowntownWineMerchants.com",
     "lat": "37.80558",
     "long": "-122.271564",
     "coords": "37.80558,-122.271564"
@@ -906,7 +906,7 @@
     "street": "3415 Grand Ave",
     "city": "Oakland",
     "phone": "510-250-9275",
-    "website": "Dozo-Ramen.business.site.",
+    "website": "https://www.Dozo-Ramen.business.site",
     "lat": "37.814114",
     "long": "-122.24668",
     "coords": "37.814114,-122.24668"
@@ -918,7 +918,7 @@
     "street": "2337 Blanding Ave.",
     "city": "Alameda",
     "phone": "510-521-1800",
-    "website": "DragonRougeByTheBay.com.",
+    "website": "https://www.DragonRougeByTheBay.com",
     "lat": "37.771292",
     "long": "-122.238756",
     "coords": "37.771292,-122.238756"
@@ -930,7 +930,7 @@
     "street": "468 19th St.",
     "city": "Oakland",
     "phone": "510-893-0174",
-    "website": "DuendeOakland.com.",
+    "website": "https://www.DuendeOakland.com",
     "lat": "37.808085",
     "long": "-122.269399",
     "coords": "37.808085,-122.269399"
@@ -942,7 +942,7 @@
     "street": "6119 La Salle Ave",
     "city": "Oakland",
     "phone": "510-834-3651",
-    "website": "EMDelicatering.com.",
+    "website": "https://www.EMDelicatering.com",
     "lat": "37.826469",
     "long": "-122.210475",
     "coords": "37.826469,-122.210475"
@@ -954,7 +954,7 @@
     "street": "1650 Park St.",
     "city": "Alameda",
     "phone": "510-263-9630",
-    "website": "EastEndAlameda.com.",
+    "website": "https://www.EastEndAlameda.com",
     "lat": "37.767823",
     "long": "-122.239552",
     "coords": "37.767823,-122.239552"
@@ -966,7 +966,7 @@
     "street": "1713 Webster St.",
     "city": "Alameda",
     "phone": "510-865-3381",
-    "website": "EastOceanSeafoodRestaurant.com.",
+    "website": "https://www.EastOceanSeafoodRestaurant.com",
     "lat": "37.776707",
     "long": "-122.276828",
     "coords": "37.776707,-122.276828"
@@ -978,7 +978,7 @@
     "street": "1761 Alcatraz Ave.",
     "city": "Berkeley",
     "phone": "510-858-5063",
-    "website": "EasyCreole.com.",
+    "website": "https://www.EasyCreole.com",
     "lat": "37.848841",
     "long": "-122.272187",
     "coords": "37.848841,-122.272187"
@@ -990,7 +990,7 @@
     "street": "2071 Mountain Blvd.",
     "city": "Oakland",
     "phone": "510-339-3000",
-    "website": "ElaAgavero.com.",
+    "website": "https://www.ElaAgavero.com",
     "lat": "37.826153",
     "long": "-122.209613",
     "coords": "37.826153,-122.209613"
@@ -1002,7 +1002,7 @@
     "street": "1108 Lincoln Ave.",
     "city": "Alameda",
     "phone": "510-521-6257",
-    "website": "ElCaballoWraps.com.",
+    "website": "https://www.ElCaballoWraps.com",
     "lat": "37.774683",
     "long": "-122.26529",
     "coords": "37.774683,-122.26529"
@@ -1014,7 +1014,7 @@
     "street": "3842 International Blvd.",
     "city": "Oakland",
     "phone": "510-533-2395",
-    "website": "ElHuaracheAztec.com.",
+    "website": "https://www.ElHuaracheAztec.com",
     "lat": "37.7748",
     "long": "-122.219166",
     "coords": "37.7748,-122.219166"
@@ -1038,7 +1038,7 @@
     "street": "1734 Webster St.",
     "city": "Oakland",
     "phone": "510-466-6652",
-    "website": "molcajetecocina.com.",
+    "website": "https://www.molcajetecocina.com",
     "lat": "37.806098",
     "long": "-122.266644",
     "coords": "37.806098,-122.266644"
@@ -1074,7 +1074,7 @@
     "street": "3301 E. 12th St.",
     "city": "Oakland",
     "phone": "510-536-0888",
-    "website": "EmilsBurger.com.",
+    "website": "https://www.EmilsBurger.com",
     "lat": "37.77567",
     "long": "-122.224682",
     "coords": "37.77567,-122.224682"
@@ -1086,7 +1086,7 @@
     "street": "357-A Grand Ave.",
     "city": "Oakland",
     "phone": "510-238-9050",
-    "website": "Enssaro.com.",
+    "website": "https://www.Enssaro.com",
     "lat": "37.808828",
     "long": "-122.255804",
     "coords": "37.808828,-122.255804"
@@ -1098,7 +1098,7 @@
     "street": "1924 Franklin St.",
     "city": "Oakland",
     "phone": "510-817-4863",
-    "website": "FalafelBoyOnline.com.",
+    "website": "https://www.FalafelBoyOnline.com",
     "lat": "37.807583",
     "long": "-122.267189",
     "coords": "37.807583,-122.267189"
@@ -1110,7 +1110,7 @@
     "street": "336 Water St.",
     "city": "Oakland",
     "phone": "510-419-0541",
-    "website": "FarmhouseThai.com/oakland.",
+    "website": "https://www.FarmhouseThai.com/oakland",
     "lat": "37.79389",
     "long": "-122.275146",
     "coords": "37.79389,-122.275146"
@@ -1122,7 +1122,7 @@
     "street": "6218 La Salle Ave.",
     "city": "Oakland",
     "phone": "510-864-9463",
-    "website": "Farmstead.biz.",
+    "website": "https://www.Farmstead.biz",
     "lat": "37.826683",
     "long": "-122.20937",
     "coords": "37.826683,-122.20937"
@@ -1134,7 +1134,7 @@
     "street": "1650 Park St.",
     "city": "Alameda",
     "phone": "510-864-2733",
-    "website": "FeelGoodBakery.com.",
+    "website": "https://www.FeelGoodBakery.com",
     "lat": "37.767823",
     "long": "-122.239552",
     "coords": "37.767823,-122.239552"
@@ -1146,7 +1146,7 @@
     "street": "4226 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-658-7000",
-    "website": "FentonsCreamery.com.",
+    "website": "https://www.FentonsCreamery.com",
     "lat": "37.827876",
     "long": "-122.250014",
     "coords": "37.827876,-122.250014"
@@ -1158,7 +1158,7 @@
     "street": "2343 Broadway",
     "city": "Oakland",
     "phone": "510-594-9213",
-    "website": "Firebrandbread.com.",
+    "website": "https://www.Firebrandbread.com",
     "lat": "37.812995",
     "long": "-122.26617",
     "coords": "37.812995,-122.26617"
@@ -1170,7 +1170,7 @@
     "street": "4166 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-531-6367",
-    "website": "WheresTheFist.com.",
+    "website": "https://www.WheresTheFist.com",
     "lat": "37.788764",
     "long": "-122.195727",
     "coords": "37.788764,-122.195727"
@@ -1182,7 +1182,7 @@
     "street": "5179 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-817-4169",
-    "website": "FOBkitchen.com.",
+    "website": "https://www.FOBkitchen.com",
     "lat": "37.83769",
     "long": "-122.262674",
     "coords": "37.83769,-122.262674"
@@ -1194,7 +1194,7 @@
     "street": "66 Franklin St.",
     "city": "Oakland",
     "phone": "510-268-3200",
-    "website": "TheForgePizza.com.",
+    "website": "https://www.TheForgePizza.com",
     "lat": "37.794543",
     "long": "-122.275699",
     "coords": "37.794543,-122.275699"
@@ -1206,7 +1206,7 @@
     "street": "3836 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-531-2658",
-    "website": "FountainGardenSeafood.com.",
+    "website": "https://www.FountainGardenSeafood.com",
     "lat": "37.791428",
     "long": "-122.198131",
     "coords": "37.791428,-122.198131"
@@ -1218,7 +1218,7 @@
     "street": "326 Seventh St.",
     "city": "Oakland",
     "phone": "510-891-8823",
-    "website": "FullHouseCafeCA.com.",
+    "website": "https://www.FullHouseCafeCA.com",
     "lat": "37.798497",
     "long": "-122.271139",
     "coords": "37.798497,-122.271139"
@@ -1230,7 +1230,7 @@
     "street": "1313 Ninth St.",
     "city": "Berkeley",
     "phone": "510-356-4855",
-    "website": "FunkyElephantThai.com.",
+    "website": "https://www.FunkyElephantThai.com",
     "lat": "37.87978",
     "long": "-122.297939",
     "coords": "37.87978,-122.297939"
@@ -1242,7 +1242,7 @@
     "street": "2121 San Pablo Ave.",
     "city": "Berkeley",
     "phone": "510-647-5016",
-    "website": "Gaumenkitzel.net.",
+    "website": "https://www.Gaumenkitzel.net",
     "lat": "37.867479",
     "long": "-122.291225",
     "coords": "37.867479,-122.291225"
@@ -1254,7 +1254,7 @@
     "street": "165 41st St.",
     "city": "Oakland",
     "phone": "510-653-4643",
-    "website": "GetaPiedmont.com.",
+    "website": "https://www.GetaPiedmont.com",
     "lat": "37.826581",
     "long": "-122.25294",
     "coords": "37.826581,-122.25294"
@@ -1266,7 +1266,7 @@
     "street": "2322 Lincoln Ave.",
     "city": "Alameda",
     "phone": "510-523-2400",
-    "website": "GimsChineseKitchen.com.",
+    "website": "https://www.GimsChineseKitchen.com",
     "lat": "37.766698",
     "long": "-122.241619",
     "coords": "37.766698,-122.241619"
@@ -1278,7 +1278,7 @@
     "street": "1586 Hopkins St.",
     "city": "Berkeley",
     "phone": "(510) 528-4692",
-    "website": "GioiaPizzeria.com.",
+    "website": "https://www.GioiaPizzeria.com",
     "lat": "37.88166",
     "long": "-122.281461",
     "coords": "37.88166,-122.281461"
@@ -1290,7 +1290,7 @@
     "street": "5940 College Ave",
     "city": "Oakland",
     "phone": "510-735-9220",
-    "website": "GoldenSquirrelPub.com.",
+    "website": "https://www.GoldenSquirrelPub.com",
     "lat": "37.847981",
     "long": "-122.251837",
     "coords": "37.847981,-122.251837"
@@ -1302,7 +1302,7 @@
     "street": "292 Fourth St.",
     "city": "Oakland",
     "phone": "510-698-2244",
-    "website": "GoodToEatDumplings.com.",
+    "website": "https://www.GoodToEatDumplings.com",
     "lat": "37.796123",
     "long": "-122.271424",
     "coords": "37.796123,-122.271424"
@@ -1314,7 +1314,7 @@
     "street": "1423 Solano Ave",
     "city": "Albany",
     "phone": "510-528-8226",
-    "website": "GordoTaqueria.co.",
+    "website": "https://www.GordoTaqueria.co",
     "lat": "37.890977",
     "long": "-122.289491",
     "coords": "37.890977,-122.289491"
@@ -1326,7 +1326,7 @@
     "street": "719 Washington St.",
     "city": "Oakland",
     "phone": "510-250-9303",
-    "website": "GraffitiPizzafl.com.",
+    "website": "https://www.GraffitiPizzafl.com",
     "lat": "37.800429",
     "long": "-122.275496",
     "coords": "37.800429,-122.275496"
@@ -1338,7 +1338,7 @@
     "street": "384 Grand Ave.",
     "city": "Oakland",
     "phone": "510-444-1507",
-    "website": "GrandAveThai.net.",
+    "website": "https://www.GrandAveThai.net",
     "lat": "37.809018",
     "long": "-122.254538",
     "coords": "37.809018,-122.254538"
@@ -1350,7 +1350,7 @@
     "street": "366B Grand Ave.",
     "city": "Oakland",
     "phone": "510-879-7568",
-    "website": "GrandeurOakland.com.",
+    "website": "https://www.GrandeurOakland.com",
     "lat": "37.809209",
     "long": "-122.255221",
     "coords": "37.809209,-122.255221"
@@ -1362,7 +1362,7 @@
     "street": "2109 Cedar St.",
     "city": "Berkeley",
     "phone": "510-883-1893",
-    "website": "GregoiRrerestaurant.com.",
+    "website": "https://www.GregoiRrerestaurant.com",
     "lat": "37.878695",
     "long": "-122.268543",
     "coords": "37.878695,-122.268543"
@@ -1386,7 +1386,7 @@
     "street": "388 Ninth St.",
     "city": "Oakland",
     "phone": "510-268-1288",
-    "website": "GumKuoRestaurant.com.",
+    "website": "https://www.GumKuoRestaurant.com",
     "lat": "37.800353",
     "long": "-122.271379",
     "coords": "37.800353,-122.271379"
@@ -1398,7 +1398,7 @@
     "street": "2214 Broadway",
     "city": "Oakland",
     "phone": "510-808-5062",
-    "website": "TheHalalGuys.com.",
+    "website": "https://www.TheHalalGuys.com",
     "lat": "37.811088",
     "long": "-122.266553",
     "coords": "37.811088,-122.266553"
@@ -1410,7 +1410,7 @@
     "street": "2315 Santa Clara Ave.",
     "city": "Alameda",
     "phone": "510-263-8688",
-    "website": "HangTenBoiler.com.",
+    "website": "https://www.HangTenBoiler.com",
     "lat": "37.765802",
     "long": "-122.242601",
     "coords": "37.765802,-122.242601"
@@ -1422,7 +1422,7 @@
     "street": "4112 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-482-3988",
-    "website": "HappyGardenOakland.com.",
+    "website": "https://www.HappyGardenOakland.com",
     "lat": "37.789547",
     "long": "-122.196706",
     "coords": "37.789547,-122.196706"
@@ -1434,7 +1434,7 @@
     "street": "4901 Telegraph Ave",
     "city": "Oakland",
     "phone": "510-593-2376",
-    "website": "HawkingBird.com.",
+    "website": "https://www.HawkingBird.com",
     "lat": "37.835925",
     "long": "-122.262934",
     "coords": "37.835925,-122.262934"
@@ -1446,7 +1446,7 @@
     "street": "5299 A College Ave.",
     "city": "Oakland",
     "phone": "510-450-0644",
-    "website": "HiPeaks.com.",
+    "website": "https://www.HiPeaks.com",
     "lat": "37.838181",
     "long": "-122.251688",
     "coords": "37.838181,-122.251688"
@@ -1458,7 +1458,7 @@
     "street": "6112 La Salle Ave.",
     "city": "Oakland",
     "phone": "510-338-0553",
-    "website": "HimalayanCurryHouseOakland.com.",
+    "website": "https://www.HimalayanCurryHouseOakland.com",
     "lat": "37.826132",
     "long": "-122.209824",
     "coords": "37.826132,-122.209824"
@@ -1470,7 +1470,7 @@
     "street": "677 Rand Ave.",
     "city": "Oakland",
     "phone": "510-272-0535",
-    "website": "OrderHolyLandRestaurant.com.",
+    "website": "https://www.OrderHolyLandRestaurant.com",
     "lat": "37.810368",
     "long": "-122.2464",
     "coords": "37.810368,-122.2464"
@@ -1482,7 +1482,7 @@
     "street": "444 Embarcadero West",
     "city": "Oakland",
     "phone": "510-836-4446",
-    "website": "HomeOfChickenAndWaffles.com.",
+    "website": "https://www.HomeOfChickenAndWaffles.com",
     "lat": "37.795508",
     "long": "-122.276932",
     "coords": "37.795508,-122.276932"
@@ -1494,7 +1494,7 @@
     "street": "4007 Webster St.",
     "city": "Oakland",
     "phone": "510-597-0400",
-    "website": "Homeroom510.com.",
+    "website": "https://www.Homeroom510.com",
     "lat": "37.828869",
     "long": "-122.260939",
     "coords": "37.828869,-122.260939"
@@ -1506,7 +1506,7 @@
     "street": "1411 Powell St.",
     "city": "Emeryville",
     "phone": "510-653-8667",
-    "website": "HonorEmeryville.com.",
+    "website": "https://www.HonorEmeryville.com",
     "lat": "37.839232",
     "long": "-122.289757",
     "coords": "37.839232,-122.289757"
@@ -1518,7 +1518,7 @@
     "street": "1915 San Pablo Ave",
     "city": "Oakland",
     "phone": "510-788-6217",
-    "website": "HopscotchOakland.com.",
+    "website": "https://www.HopscotchOakland.com",
     "lat": "37.809177",
     "long": "-122.273187",
     "coords": "37.809177,-122.273187"
@@ -1530,7 +1530,7 @@
     "street": "10561 San Pablo Ave",
     "city": "El Cerrito",
     "phone": "510-529-4585",
-    "website": "HoshiSushiElCerrito.com.",
+    "website": "https://www.HoshiSushiElCerrito.com",
     "lat": "37.910776",
     "long": "-122.308575",
     "coords": "37.910776,-122.308575"
@@ -1542,7 +1542,7 @@
     "street": "734 Webster St.",
     "city": "Oakland",
     "phone": "702-481-3124",
-    "website": "HuangchengNoodle.com.",
+    "website": "https://www.HuangchengNoodle.com",
     "lat": "37.798745",
     "long": "-122.271558",
     "coords": "37.798745,-122.271558"
@@ -1554,7 +1554,7 @@
     "street": "4100 Redwood Rd",
     "city": "Oakland",
     "phone": "510-531-1415",
-    "website": "HunanYuan.com.",
+    "website": "https://www.HunanYuan.com",
     "lat": "37.797568",
     "long": "-122.181943",
     "coords": "37.797568,-122.181943"
@@ -1578,7 +1578,7 @@
     "street": "3268 Grand Ave.",
     "city": "Oakland",
     "phone": "510-899-4400",
-    "website": "IkarosGr.com.",
+    "website": "https://www.IkarosGr.com",
     "lat": "37.812471",
     "long": "-122.246929",
     "coords": "37.812471,-122.246929"
@@ -1602,7 +1602,7 @@
     "street": "1511 Shattuck Ave.",
     "city": "Berkeley",
     "phone": "510-540-8888",
-    "website": "ImperialTea.com.",
+    "website": "https://www.ImperialTea.com",
     "lat": "37.879812",
     "long": "-122.268896",
     "coords": "37.879812,-122.268896"
@@ -1614,7 +1614,7 @@
     "street": "737 Buena Vista Ave.",
     "city": "Alameda",
     "phone": "510-814-8778",
-    "website": "IndiaPalaceAlameda.us.",
+    "website": "https://www.IndiaPalaceAlameda.us",
     "lat": "37.777339",
     "long": "-122.275045",
     "coords": "37.777339,-122.275045"
@@ -1638,7 +1638,7 @@
     "street": "2220 Mountain Blvd.",
     "city": "Oakland",
     "phone": "510-482-8094",
-    "website": "ItalianColorsRestaurant.com.",
+    "website": "https://www.ItalianColorsRestaurant.com",
     "lat": "37.823452",
     "long": "-122.207275",
     "coords": "37.823452,-122.207275"
@@ -1650,7 +1650,7 @@
     "street": "1736 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-788-7489",
-    "website": "ItaniRamen.com.",
+    "website": "https://www.ItaniRamen.com",
     "lat": "37.807082",
     "long": "-122.270115",
     "coords": "37.807082,-122.270115"
@@ -1662,7 +1662,7 @@
     "street": "2333 Lincoln Ave.",
     "city": "Alameda",
     "phone": "510-523-5368",
-    "website": "JimsCoffeeShop.com.",
+    "website": "https://www.JimsCoffeeShop.com",
     "lat": "37.766863",
     "long": "-122.241197",
     "coords": "37.766863,-122.241197"
@@ -1674,7 +1674,7 @@
     "street": "2316 Santa Clara Ave.",
     "city": "Alameda",
     "phone": "510-522-8040",
-    "website": "JohnathansSandwichAlameda.com.",
+    "website": "https://www.JohnathansSandwichAlameda.com",
     "lat": "37.76551",
     "long": "-122.242658",
     "coords": "37.76551,-122.242658"
@@ -1686,7 +1686,7 @@
     "street": "1543 Shattuck Ave.",
     "city": "Berkeley",
     "phone": "510 848-9664",
-    "website": "JotMahalBerkeley.site.",
+    "website": "https://www.JotMahalBerkeley.site",
     "lat": "37.878719",
     "long": "-122.268807",
     "coords": "37.878719,-122.268807"
@@ -1698,7 +1698,7 @@
     "street": "1223 Park St",
     "city": "Alameda",
     "phone": "510-865-2385",
-    "website": "JuliesTea.com.",
+    "website": "https://www.JuliesTea.com",
     "lat": "37.761554",
     "long": "-122.245238",
     "coords": "37.761554,-122.245238"
@@ -1710,7 +1710,7 @@
     "street": "2060 Mountain Blvd.",
     "city": "Oakland",
     "phone": "510-338-1188",
-    "website": "KakuiSushi.com.",
+    "website": "https://www.KakuiSushi.com",
     "lat": "37.826517",
     "long": "-122.2096",
     "coords": "37.826517,-122.2096"
@@ -1722,7 +1722,7 @@
     "street": "1410 Solano Ave.",
     "city": "Albany",
     "phone": "510-526-3222",
-    "website": "Kathmandu-Restaurant.com.",
+    "website": "https://www.Kathmandu-Restaurant.com",
     "lat": "37.89064",
     "long": "-122.289076",
     "coords": "37.89064,-122.289076"
@@ -1734,7 +1734,7 @@
     "street": "5316 College Ave.",
     "city": "Oakland",
     "phone": "510-658-2300",
-    "website": "OrderKhanaPeena.com.",
+    "website": "https://www.OrderKhanaPeena.com",
     "lat": "37.838432",
     "long": "-122.251142",
     "coords": "37.838432,-122.251142"
@@ -1746,7 +1746,7 @@
     "street": "3421 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-530-6288",
-    "website": "KingKongChineseCa.com.",
+    "website": "https://www.KingKongChineseCa.com",
     "lat": "37.793949",
     "long": "-122.201138",
     "coords": "37.793949,-122.201138"
@@ -1758,7 +1758,7 @@
     "street": "2270 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-465-2558",
-    "website": "Kingston11eats.com.",
+    "website": "https://www.Kingston11eats.com",
     "lat": "37.812284",
     "long": "-122.268599",
     "coords": "37.812284,-122.268599"
@@ -1770,7 +1770,7 @@
     "street": "357 Grand Ave.",
     "city": "Oakland",
     "phone": "510-452-2443",
-    "website": "KinjaOakland.com.",
+    "website": "https://www.KinjaOakland.com",
     "lat": "37.808828",
     "long": "-122.255804",
     "coords": "37.808828,-122.255804"
@@ -1806,7 +1806,7 @@
     "street": "2026 San Pablo Ave.",
     "city": "Berkeley",
     "phone": "510-647-9525",
-    "website": "LaMarchaBerkeley.com.",
+    "website": "https://www.LaMarchaBerkeley.com",
     "lat": "37.868585",
     "long": "-122.292377",
     "coords": "37.868585,-122.292377"
@@ -1818,7 +1818,7 @@
     "street": "2936 College Ave.",
     "city": "Berkeley",
     "phone": "510-540-7773",
-    "website": "CafeLaMed.com.",
+    "website": "https://www.CafeLaMed.com",
     "lat": "37.85758",
     "long": "-122.253378",
     "coords": "37.85758,-122.253378"
@@ -1830,7 +1830,7 @@
     "street": "1440 Park St.",
     "city": "Alameda",
     "phone": "510-769-9110",
-    "website": "LaPencaAzul.com.",
+    "website": "https://www.LaPencaAzul.com",
     "lat": "37.765138",
     "long": "-122.241846",
     "coords": "37.765138,-122.241846"
@@ -1842,7 +1842,7 @@
     "street": "333 Broadway",
     "city": "Oakland",
     "phone": "925-207-9275",
-    "website": "La-Santa-Torta.com.",
+    "website": "https://www.La-Santa-Torta.com",
     "lat": "37.797347",
     "long": "-122.275948",
     "coords": "37.797347,-122.275948"
@@ -1866,7 +1866,7 @@
     "street": "1406 Solano Ave",
     "city": "Albany",
     "phone": "510-558-8915",
-    "website": "LaoThaiKitchen.com.",
+    "website": "https://www.LaoThaiKitchen.com",
     "lat": "37.890617",
     "long": "-122.289202",
     "coords": "37.890617,-122.289202"
@@ -1878,7 +1878,7 @@
     "street": "10166 San Pablo Ave",
     "city": "El Cerrito",
     "phone": "510-524-8988",
-    "website": "LarbThaiTapas.com.",
+    "website": "https://www.LarbThaiTapas.com",
     "lat": "37.903508",
     "long": "-122.303478",
     "coords": "37.903508,-122.303478"
@@ -1890,7 +1890,7 @@
     "street": "6403 Foothill Blvd.",
     "city": "Oakland",
     "phone": "510-957-5663",
-    "website": "LenasSoulFoodCafe.com.",
+    "website": "https://www.LenasSoulFoodCafe.com",
     "lat": "37.770487",
     "long": "-122.184521",
     "coords": "37.770487,-122.184521"
@@ -1902,7 +1902,7 @@
     "street": "3437 Lakeshore Ave",
     "city": "Oakland",
     "phone": "510-835-8322",
-    "website": "LinJiaKitchen.com.",
+    "website": "https://www.LinJiaKitchen.com",
     "lat": "37.811599",
     "long": "-122.242648",
     "coords": "37.811599,-122.242648"
@@ -1914,7 +1914,7 @@
     "street": "2300 Blanding Ave.",
     "city": "Alameda",
     "phone": "510-864-4044",
-    "website": "LittleHouseCafe.com.",
+    "website": "https://www.LittleHouseCafe.com",
     "lat": "37.771341",
     "long": "-122.239525",
     "coords": "37.771341,-122.239525"
@@ -1926,7 +1926,7 @@
     "street": "4270 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-652-6222",
-    "website": "LoCoCosPiedmont.com.",
+    "website": "https://www.LoCoCosPiedmont.com",
     "lat": "37.82833",
     "long": "-122.249483",
     "coords": "37.82833,-122.249483"
@@ -1950,7 +1950,7 @@
     "street": "1417 Park St.",
     "city": "Alameda",
     "phone": "510-521-4488",
-    "website": "LolasChickenShack.com.",
+    "website": "https://www.LolasChickenShack.com",
     "lat": "37.764807",
     "long": "-122.242538",
     "coords": "37.764807,-122.242538"
@@ -1974,7 +1974,7 @@
     "street": "2221 Broadway",
     "city": "Oakland",
     "phone": "510-451-4677",
-    "website": "LukasOakland.com.",
+    "website": "https://www.LukasOakland.com",
     "lat": "37.811513",
     "long": "-122.267042",
     "coords": "37.811513,-122.267042"
@@ -1986,7 +1986,7 @@
     "street": "3762 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-344-7214",
-    "website": "MagoRestaurant.com.",
+    "website": "https://www.MagoRestaurant.com",
     "lat": "37.823599",
     "long": "-122.256041",
     "coords": "37.823599,-122.256041"
@@ -1998,7 +1998,7 @@
     "street": "375 40th St.",
     "city": "Oakland",
     "phone": "510-788-4698",
-    "website": "MagpieOakland.com.",
+    "website": "https://www.MagpieOakland.com",
     "lat": "37.827944",
     "long": "-122.259117",
     "coords": "37.827944,-122.259117"
@@ -2010,7 +2010,7 @@
     "street": "1241 Park St.",
     "city": "Alameda",
     "phone": "510-522-4100",
-    "website": "MamaPapaLithuania.com.",
+    "website": "https://www.MamaPapaLithuania.com",
     "lat": "37.762053",
     "long": "-122.244841",
     "coords": "37.762053,-122.244841"
@@ -2022,7 +2022,7 @@
     "street": "4012 Broadway",
     "city": "Oakland",
     "phone": "510-547-7600",
-    "website": "MamasRoyal.cafe.",
+    "website": "https://www.MamasRoyal.cafe",
     "lat": "37.827706",
     "long": "-122.256147",
     "coords": "37.827706,-122.256147"
@@ -2034,7 +2034,7 @@
     "street": "5301 College Ave.",
     "city": "Oakland",
     "phone": "510-985-8388",
-    "website": "MaricaOakland.com.",
+    "website": "https://www.MaricaOakland.com",
     "lat": "37.838112",
     "long": "-122.251383",
     "coords": "37.838112,-122.251383"
@@ -2082,7 +2082,7 @@
     "street": "4828 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-823-2416",
-    "website": "MarufukuRamen.com.",
+    "website": "https://www.MarufukuRamen.com",
     "lat": "37.835065",
     "long": "-122.262793",
     "coords": "37.835065,-122.262793"
@@ -2094,7 +2094,7 @@
     "street": "4214 Park Blvd.",
     "city": "Oakland",
     "phone": "510-479-1448",
-    "website": "MarzanoRestaurant.com.",
+    "website": "https://www.MarzanoRestaurant.com",
     "lat": "37.80729",
     "long": "-122.221964",
     "coords": "37.80729,-122.221964"
@@ -2106,7 +2106,7 @@
     "street": "1645 Park St.",
     "city": "Alameda",
     "phone": "510-522-3470",
-    "website": "McGeesBarAndGrill.com.",
+    "website": "https://www.McGeesBarAndGrill.com",
     "lat": "37.767809",
     "long": "-122.240006",
     "coords": "37.767809,-122.240006"
@@ -2130,7 +2130,7 @@
     "street": "5959 Shellmound St.",
     "city": "Emeryville",
     "phone": "",
-    "website": "EmeryvilleMinnieBellsSoul.com.",
+    "website": "https://www.EmeryvilleMinnieBellsSoul.com",
     "lat": "37.841483",
     "long": "-122.293687",
     "coords": "37.841483,-122.293687"
@@ -2142,7 +2142,7 @@
     "street": "831 Marina Village Parkway",
     "city": "Alameda",
     "phone": "510-522-2758",
-    "website": "MintLeafVR.com.",
+    "website": "https://www.MintLeafVR.com",
     "lat": "37.787899",
     "long": "-122.276677",
     "coords": "37.787899,-122.276677"
@@ -2154,7 +2154,7 @@
     "street": "901 Washington St.",
     "city": "Oakland",
     "phone": "510-285-6188",
-    "website": "RealMissOlliesOakland.com.",
+    "website": "https://www.RealMissOlliesOakland.com",
     "lat": "37.801628",
     "long": "-122.274704",
     "coords": "37.801628,-122.274704"
@@ -2166,7 +2166,7 @@
     "street": "3858 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-652-1439",
-    "website": "MisturaPiedmont.com.",
+    "website": "https://www.MisturaPiedmont.com",
     "lat": "37.82443",
     "long": "-122.254899",
     "coords": "37.82443,-122.254899"
@@ -2178,7 +2178,7 @@
     "street": "1147 40th St.",
     "city": "Emeryville",
     "phone": "510-923-0311",
-    "website": "gotsushiandsake.com.",
+    "website": "https://www.gotsushiandsake.com",
     "lat": "37.830998",
     "long": "-122.279406",
     "coords": "37.830998,-122.279406"
@@ -2202,7 +2202,7 @@
     "street": "1315 Park St.",
     "city": "Alameda",
     "phone": "510-522-8882",
-    "website": "MonkeyKingToGgo.com.",
+    "website": "https://www.MonkeyKingToGgo.com",
     "lat": "37.762974",
     "long": "-122.244071",
     "coords": "37.762974,-122.244071"
@@ -2214,7 +2214,7 @@
     "street": "3236 Grand Ave",
     "city": "Oakland",
     "phone": "510-451-9419",
-    "website": "NeechaThai.com.",
+    "website": "https://www.NeechaThai.com",
     "lat": "37.81198",
     "long": "-122.247238",
     "coords": "37.81198,-122.247238"
@@ -2226,7 +2226,7 @@
     "street": "630 Central Ave.",
     "city": "Alameda",
     "phone": "510-263-9438",
-    "website": "NeptunesAlameda.com.",
+    "website": "https://www.NeptunesAlameda.com",
     "lat": "37.771351",
     "long": "-122.278086",
     "coords": "37.771351,-122.278086"
@@ -2262,7 +2262,7 @@
     "street": "104 Oak St.",
     "city": "Oakland",
     "phone": "510-500-9757",
-    "website": "BackyardOakland.com.",
+    "website": "https://www.BackyardOakland.com",
     "lat": "37.79212",
     "long": "-122.268199",
     "coords": "37.79212,-122.268199"
@@ -2274,7 +2274,7 @@
     "street": "4066 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-601-6441",
-    "website": "NinnaRestaurant.com.",
+    "website": "https://www.NinnaRestaurant.com",
     "lat": "37.826201",
     "long": "-122.2526",
     "coords": "37.826201,-122.2526"
@@ -2286,7 +2286,7 @@
     "street": "10086 San Pablo Ave.",
     "city": "El Cerrito",
     "phone": "510-647-8038",
-    "website": "NongThonRestaurant.com.",
+    "website": "https://www.NongThonRestaurant.com",
     "lat": "37.902165",
     "long": "-122.302991",
     "coords": "37.902165,-122.302991"
@@ -2298,7 +2298,7 @@
     "street": "10042 San Pablo Ave.",
     "city": "El Cerrito",
     "phone": "510-898-1710",
-    "website": "NoodlesFresh.com.",
+    "website": "https://www.NoodlesFresh.com",
     "lat": "37.901476",
     "long": "-122.302662",
     "coords": "37.901476,-122.302662"
@@ -2310,7 +2310,7 @@
     "street": "3340 E 12th St.",
     "city": "Oakland",
     "phone": "510-500-3338",
-    "website": "NyumBai.com.",
+    "website": "https://www.NyumBai.com",
     "lat": "37.776255",
     "long": "-122.224236",
     "coords": "37.776255,-122.224236"
@@ -2322,7 +2322,7 @@
     "street": "3411 E. 12th St.",
     "city": "Oakland",
     "phone": "510-534-3752",
-    "website": "ObeliscoRestaurant.com.",
+    "website": "https://www.ObeliscoRestaurant.com",
     "lat": "37.775383",
     "long": "-122.223941",
     "coords": "37.775383,-122.223941"
@@ -2334,7 +2334,7 @@
     "street": "722 Clay St.",
     "city": "Oakland",
     "phone": "510- 817-4157",
-    "website": "OesteOakland.com.",
+    "website": "https://www.OesteOakland.com",
     "lat": "37.800765",
     "long": "-122.276122",
     "coords": "37.800765,-122.276122"
@@ -2358,7 +2358,7 @@
     "street": "1507 Park St.",
     "city": "Alameda",
     "phone": "510-522-8108",
-    "website": "OlesWaffleShop.com.",
+    "website": "https://www.OlesWaffleShop.com",
     "lat": "37.76566",
     "long": "-122.241784",
     "coords": "37.76566,-122.241784"
@@ -2370,7 +2370,7 @@
     "street": "5655 College Ave.",
     "city": "Oakland",
     "phone": "510-547-5356",
-    "website": "Oliveto.com.",
+    "website": "https://www.Oliveto.com",
     "lat": "37.84461",
     "long": "-122.252827",
     "coords": "37.84461,-122.252827"
@@ -2382,7 +2382,7 @@
     "street": "2630 Fifth St.",
     "city": "Alameda",
     "phone": "510-239-4407",
-    "website": "OnoHawaiianBBQ.com.",
+    "website": "https://www.OnoHawaiianBBQ.com",
     "lat": "37.786761",
     "long": "-122.280734",
     "coords": "37.786761,-122.280734"
@@ -2406,7 +2406,7 @@
     "street": "1619 Webster St.",
     "city": "Alameda",
     "phone": "510-521-9090",
-    "website": "OtaezRestaurant.com.",
+    "website": "https://www.OtaezRestaurant.com",
     "lat": "37.775863",
     "long": "-122.276854",
     "coords": "37.775863,-122.276854"
@@ -2418,7 +2418,7 @@
     "street": "3872 International Blvd.",
     "city": "Oakland",
     "phone": "510-536-0909",
-    "website": "OtaezRestaurant.com.",
+    "website": "https://www.OtaezRestaurant.com",
     "lat": "37.7746",
     "long": "-122.218984",
     "coords": "37.7746,-122.218984"
@@ -2430,7 +2430,7 @@
     "street": "6200 Antioch St.",
     "city": "Oakland",
     "phone": "510-339-0566",
-    "website": "PagarungThai.com.",
+    "website": "https://www.PagarungThai.com",
     "lat": "37.825804",
     "long": "-122.208987",
     "coords": "37.825804,-122.208987"
@@ -2442,7 +2442,7 @@
     "street": "2514 San Pablo Ave.",
     "city": "Berkeley",
     "phone": "510-649-1031",
-    "website": "PaisanBerkeley.com.",
+    "website": "https://www.PaisanBerkeley.com",
     "lat": "37.860381",
     "long": "-122.289745",
     "coords": "37.860381,-122.289745"
@@ -2466,7 +2466,7 @@
     "street": "2320 Central Ave.",
     "city": "Alameda",
     "phone": "510-337-9100",
-    "website": "PappoRestaurant.com.",
+    "website": "https://www.PappoRestaurant.com",
     "lat": "37.764274",
     "long": "-122.243339",
     "coords": "37.764274,-122.243339"
@@ -2478,7 +2478,7 @@
     "street": "6334 San Pablo Ave.",
     "city": "Oakland",
     "phone": "510-756-3131",
-    "website": "ParadiseParkCafe.com.",
+    "website": "https://www.ParadiseParkCafe.com",
     "lat": "37.846833",
     "long": "-122.284654",
     "coords": "37.846833,-122.284654"
@@ -2490,7 +2490,7 @@
     "street": "4218 Park Blvd.",
     "city": "Oakland",
     "phone": "510-479-1402",
-    "website": "ParkBurgerOakland.com.",
+    "website": "https://www.ParkBurgerOakland.com",
     "lat": "37.807306",
     "long": "-122.222367",
     "coords": "37.807306,-122.222367"
@@ -2502,7 +2502,7 @@
     "street": "2565 Telegraph Ave.",
     "city": "Berkeley",
     "phone": "510-845-2363",
-    "website": "pastabenebk.com.",
+    "website": "https://www.pastabenebk.com",
     "lat": "37.863839",
     "long": "-122.258284",
     "coords": "37.863839,-122.258284"
@@ -2514,7 +2514,7 @@
     "street": "2455 Mariner Square Dr.",
     "city": "Alameda",
     "phone": "510-864-7427",
-    "website": "PastaPelican.com.",
+    "website": "https://www.PastaPelican.com",
     "lat": "37.791488",
     "long": "-122.277422",
     "coords": "37.791488,-122.277422"
@@ -2526,7 +2526,7 @@
     "street": "4239 Park Blvd.",
     "city": "Oakland",
     "phone": "510-866-2133",
-    "website": "Paulista510.com.",
+    "website": "https://www.Paulista510.com",
     "lat": "37.807802",
     "long": "-122.222173",
     "coords": "37.807802,-122.222173"
@@ -2538,13 +2538,13 @@
     "street": "2058 Mountain Blvd.",
     "city": "Oakland",
     "phone": "510-808-7767",
-    "website": "PerleWineBar.com.",
+    "website": "https://www.PerleWineBar.com",
     "lat": "37.826531",
     "long": "-122.209608",
     "coords": "37.826531,-122.209608"
   },
   {
-    "name": "Ph? Anh Dao",
+    "name": "Pho Anh Dao",
     "cuisine": "Vietnamese",
     "takout_option": "takeout",
     "street": "280 E. 18th St.",
@@ -2574,7 +2574,7 @@
     "street": "1514 Webster St.",
     "city": "Alameda",
     "phone": "510-893-3825",
-    "website": "PhnomPenhHouse.com.",
+    "website": "https://www.PhnomPenhHouse.com",
     "lat": "37.773842",
     "long": "-122.276621",
     "coords": "37.773842,-122.276621"
@@ -2646,7 +2646,7 @@
     "street": "5008 Telegraph Ave.",
     "city": "Oakland",
     "phone": "",
-    "website": "PizzaioloOakland.com.",
+    "website": "https://www.PizzaioloOakland.com",
     "lat": "37.836539",
     "long": "-122.261929",
     "coords": "37.836539,-122.261929"
@@ -2658,7 +2658,7 @@
     "street": "98 Broadway",
     "city": "Oakland",
     "phone": "510-817-0980",
-    "website": "PlankOakland.com.",
+    "website": "https://www.PlankOakland.com",
     "lat": "37.79535",
     "long": "-122.276783",
     "coords": "37.79535,-122.276783"
@@ -2694,7 +2694,7 @@
     "street": "411 26th St.",
     "city": "Oakland",
     "phone": "510-457-1724",
-    "website": "PopocaOakland.com.",
+    "website": "https://www.PopocaOakland.com",
     "lat": "37.814946",
     "long": "-122.266612",
     "coords": "37.814946,-122.266612"
@@ -2706,7 +2706,7 @@
     "street": "3411 East 12th St.",
     "city": "Oakland",
     "phone": "510-536-3223",
-    "website": "PowderFaceCafe.com/home.html.",
+    "website": "https://www.PowderFaceCafe.com/home.html",
     "lat": "37.775383",
     "long": "-122.223941",
     "coords": "37.775383,-122.223941"
@@ -2718,7 +2718,7 @@
     "street": "1733 Peralta St.",
     "city": "Oakland",
     "phone": "510-350-7208",
-    "website": "PrettyLadyRestaurant.squarespace.com.",
+    "website": "https://www.PrettyLadyRestaurant.squarespace.com",
     "lat": "37.814044",
     "long": "-122.292197",
     "coords": "37.814044,-122.292197"
@@ -2730,7 +2730,7 @@
     "street": "3260 Lakeshore Ave.",
     "city": "Oakland",
     "phone": "510-808-5172",
-    "website": "PropositionChicken.",
+    "website": "https://www.PropositionChicken",
     "lat": "37.810183",
     "long": "-122.245447",
     "coords": "37.810183,-122.245447"
@@ -2742,7 +2742,7 @@
     "street": "5337 College Ave.",
     "city": "Oakland",
     "phone": "510-658-7378",
-    "website": "Pucquio.com.",
+    "website": "https://www.Pucquio.com",
     "lat": "37.838755",
     "long": "-122.251542",
     "coords": "37.838755,-122.251542"
@@ -2814,7 +2814,7 @@
     "street": "1111 Solano Ave.",
     "city": "Albany",
     "phone": "510-527-4111",
-    "website": "RendezvousCafeBistro.com.",
+    "website": "https://www.RendezvousCafeBistro.com",
     "lat": "37.890478",
     "long": "-122.298349",
     "coords": "37.890478,-122.298349"
@@ -2826,7 +2826,7 @@
     "street": "2922 Domingo Ave.",
     "city": "Berkeley",
     "phone": "510-649-8538",
-    "website": "RickAndAnns.com.",
+    "website": "https://www.RickAndAnns.com",
     "lat": "37.858559",
     "long": "-122.244142",
     "coords": "37.858559,-122.244142"
@@ -2838,7 +2838,7 @@
     "street": "3205 Lakeshore Blvd.",
     "city": "Oakland",
     "phone": "510-922-8262",
-    "website": "RicoRicoTaco.com",
+    "website": "https://www.RicoRicoTaco.co",
     "lat": "37.810542",
     "long": "-122.24537",
     "coords": "37.810542,-122.24537"
@@ -2850,7 +2850,7 @@
     "street": "5335 College Ave.",
     "city": "Oakland",
     "phone": "510-595-7388",
-    "website": "RikyuSushi.com.",
+    "website": "https://www.RikyuSushi.com",
     "lat": "37.838842",
     "long": "-122.251622",
     "coords": "37.838842,-122.251622"
@@ -2862,7 +2862,7 @@
     "street": "911 Washington St.",
     "city": "Oakland",
     "phone": "510-338-310",
-    "website": "RosamundeSausageGrill.com",
+    "website": "https://www.RosamundeSausageGrill.co",
     "lat": "37.801473",
     "long": "-122.274725",
     "coords": "37.801473,-122.274725"
@@ -2874,7 +2874,7 @@
     "street": "4081 Hollis St.",
     "city": "Emeryville",
     "phone": "510-594-1221",
-    "website": "IAmRudy.com.",
+    "website": "https://www.IAmRudy.com",
     "lat": "37.830937",
     "long": "-122.285925",
     "coords": "37.830937,-122.285925"
@@ -2886,7 +2886,7 @@
     "street": "6106 La Salle Ave.",
     "city": "Oakland",
     "phone": "510-654-1601",
-    "website": "Rustica-Pizza.com.",
+    "website": "https://www.Rustica-Pizza.com",
     "lat": "37.826155",
     "long": "-122.210412",
     "coords": "37.826155,-122.210412"
@@ -2898,7 +2898,7 @@
     "street": "3932 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-879-7806",
-    "website": "SaucyOakland.com.",
+    "website": "https://www.SaucyOakland.com",
     "lat": "37.82863",
     "long": "-122.264547",
     "coords": "37.82863,-122.264547"
@@ -2910,7 +2910,7 @@
     "street": "350 Fourth St.",
     "city": "Oakland",
     "phone": "510-891-1660",
-    "website": "Seawolf.pub.",
+    "website": "https://www.Seawolf.pub",
     "lat": "37.796638",
     "long": "-122.272736",
     "coords": "37.796638,-122.272736"
@@ -2922,7 +2922,7 @@
     "street": "3719 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510-482-3719",
-    "website": "SequoiaDiner.com/about-2.",
+    "website": "https://www.SequoiaDiner.com/about-2",
     "lat": "37.792059",
     "long": "-122.19938",
     "coords": "37.792059,-122.19938"
@@ -2934,7 +2934,7 @@
     "street": "3407 Lakeshore Ave.",
     "city": "Oakland",
     "phone": "510-307-8516",
-    "website": "ShakeWellOakland.com.",
+    "website": "https://www.ShakeWellOakland.com",
     "lat": "37.811375",
     "long": "-122.243144",
     "coords": "37.811375,-122.243144"
@@ -2946,7 +2946,7 @@
     "street": "328 10th St.",
     "city": "Oakland",
     "phone": "510-839-2299",
-    "website": "ShandongOakland.com.",
+    "website": "https://www.ShandongOakland.com",
     "lat": "37.80055",
     "long": "-122.269854",
     "coords": "37.80055,-122.269854"
@@ -2970,7 +2970,7 @@
     "street": "1438 Broadway",
     "city": "Oakland",
     "phone": "857-544-4968",
-    "website": "ShibaRamen.com.",
+    "website": "https://www.ShibaRamen.com",
     "lat": "37.804612",
     "long": "-122.270863",
     "coords": "37.804612,-122.270863"
@@ -2982,7 +2982,7 @@
     "street": "3417 Grand Ave.",
     "city": "Oakland",
     "phone": "510-499-8639",
-    "website": "ShogunJapaneseOakland.com.",
+    "website": "https://www.ShogunJapaneseOakland.com",
     "lat": "37.81393",
     "long": "-122.24673",
     "coords": "37.81393,-122.24673"
@@ -2994,7 +2994,7 @@
     "street": "1022 Webster St.",
     "city": "Oakland",
     "phone": "510-251-9882",
-    "website": "ShootingStarhkCafe.com.",
+    "website": "https://www.ShootingStarhkCafe.com",
     "lat": "37.800907",
     "long": "-122.27",
     "coords": "37.800907,-122.27"
@@ -3006,7 +3006,7 @@
     "street": "131 Broadway",
     "city": "Oakland",
     "phone": "510-823-2644",
-    "website": "SlainteOakland.com.",
+    "website": "https://www.SlainteOakland.com",
     "lat": "37.796028",
     "long": "-122.276771",
     "coords": "37.796028,-122.276771"
@@ -3018,7 +3018,7 @@
     "street": "2174 Shattuck Ave.",
     "city": "Berkeley",
     "phone": "510-705-1988",
-    "website": "SliverPizzeria.com.",
+    "website": "https://www.SliverPizzeria.com",
     "lat": "37.869772",
     "long": "-122.268468",
     "coords": "37.869772,-122.268468"
@@ -3030,7 +3030,7 @@
     "street": "2468 Telegraph Ave.",
     "city": "Berkeley",
     "phone": "510-356-4044",
-    "website": "SliverPizzeria.com.",
+    "website": "https://www.SliverPizzeria.com",
     "lat": "37.865605",
     "long": "-122.258815",
     "coords": "37.865605,-122.258815"
@@ -3042,7 +3042,7 @@
     "street": "4307 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-423-8634",
-    "website": "SmokinWoodsBBQ.com.",
+    "website": "https://www.SmokinWoodsBBQ.com",
     "lat": "37.831861",
     "long": "-122.264167",
     "coords": "37.831861,-122.264167"
@@ -3054,7 +3054,7 @@
     "street": "3824 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-808-7655",
-    "website": "SnowWhiteCoffee.com.",
+    "website": "https://www.SnowWhiteCoffee.com",
     "lat": "37.824064",
     "long": "-122.255071",
     "coords": "37.824064,-122.255071"
@@ -3066,7 +3066,7 @@
     "street": "988 Franklin St.",
     "city": "Oakland",
     "phone": "510-832-7626",
-    "website": "SoboRamen.com.",
+    "website": "https://www.SoboRamen.com",
     "lat": "37.800795",
     "long": "-122.271511",
     "coords": "37.800795,-122.271511"
@@ -3078,7 +3078,7 @@
     "street": "5421 College Ave.",
     "city": "Oakland",
     "phone": "510-655-0889",
-    "website": "SoiFour.com.",
+    "website": "https://www.SoiFour.com",
     "lat": "37.84065",
     "long": "-122.251606",
     "coords": "37.84065,-122.251606"
@@ -3090,7 +3090,7 @@
     "street": "301 Broadway",
     "city": "Oakland",
     "phone": "510-922-1615",
-    "website": "SouleyVegan.com.",
+    "website": "https://www.SouleyVegan.com",
     "lat": "37.797024",
     "long": "-122.276101",
     "coords": "37.797024,-122.276101"
@@ -3102,7 +3102,7 @@
     "street": "6311 College Ave.",
     "city": "Oakland",
     "phone": "510-654-0100",
-    "website": "SouthieOakland.com.",
+    "website": "https://www.SouthieOakland.com",
     "lat": "37.85069",
     "long": "-122.252713",
     "coords": "37.85069,-122.252713"
@@ -3114,7 +3114,7 @@
     "street": "4120 Redwood Road",
     "city": "Oakland",
     "phone": "510-531-5617",
-    "website": "SparkysGiantBurgers.food94.com.",
+    "website": "https://www.SparkysGiantBurgers.food94.com",
     "lat": "37.796968",
     "long": "-122.182478",
     "coords": "37.796968,-122.182478"
@@ -3126,7 +3126,7 @@
     "street": "2424 Lincoln Ave.",
     "city": "Alameda",
     "phone": "510-522-1300",
-    "website": "Speisekammer.com.",
+    "website": "https://www.Speisekammer.com",
     "lat": "37.766064",
     "long": "-122.239971",
     "coords": "37.766064,-122.239971"
@@ -3162,7 +3162,7 @@
     "street": "1205 Park St.",
     "city": "Alameda",
     "phone": "",
-    "website": "SpinningBones.com.",
+    "website": "https://www.SpinningBones.com",
     "lat": "37.76106",
     "long": "-122.245631",
     "coords": "37.76106,-122.245631"
@@ -3186,7 +3186,7 @@
     "street": "5885 Hollis St.",
     "city": "Emeryville",
     "phone": "510-658-3234",
-    "website": "SummerSummerThai.com/",
+    "website": "https://www.SummerSummerThai.com",
     "lat": "37.841094",
     "long": "-122.289892",
     "coords": "37.841094,-122.289892"
@@ -3210,7 +3210,7 @@
     "street": "2375 Shoreline Dr.",
     "city": "Alameda",
     "phone": "510-865-0999",
-    "website": "E-SushiHouse.com.",
+    "website": "https://www.E-SushiHouse.com",
     "lat": "37.754646",
     "long": "-122.250524",
     "coords": "37.754646,-122.250524"
@@ -3222,7 +3222,7 @@
     "street": "2355 Broadway",
     "city": "Oakland",
     "phone": "510-788-4997",
-    "website": "SweetBarBakery.com",
+    "website": "https://www.SweetBarBakery.co",
     "lat": "37.812901",
     "long": "-122.266114",
     "coords": "37.812901,-122.266114"
@@ -3270,7 +3270,7 @@
     "street": "1501 Harrison St.",
     "city": "Oakland",
     "phone": "510-788-7545",
-    "website": "TamarackOakland.com.",
+    "website": "https://www.TamarackOakland.com",
     "lat": "37.804068",
     "long": "-122.267095",
     "coords": "37.804068,-122.267095"
@@ -3294,7 +3294,7 @@
     "street": "2081 Mountain Blvd.",
     "city": "Oakland",
     "phone": "510-339-9002",
-    "website": "TaqueriaLasComadres.com.",
+    "website": "https://www.TaqueriaLasComadres.com",
     "lat": "37.826373",
     "long": "-122.209493",
     "coords": "37.826373,-122.209493"
@@ -3330,7 +3330,7 @@
     "street": "344 12th St.",
     "city": "Oakland",
     "phone": "",
-    "website": "TayHo-oakland.com.",
+    "website": "https://www.TayHo-oakland.com",
     "lat": "37.802114",
     "long": "-122.269233",
     "coords": "37.802114,-122.269233"
@@ -3366,7 +3366,7 @@
     "street": "907 Washington St.",
     "city": "Oakland",
     "phone": "510-285-6140",
-    "website": "TheCookAndHerFarmer.com.",
+    "website": "https://www.TheCookAndHerFarmer.com",
     "lat": "37.801755",
     "long": "-122.274615",
     "coords": "37.801755,-122.274615"
@@ -3378,7 +3378,7 @@
     "street": "2507 Broadway",
     "city": "Oakland",
     "phone": "510-409-5601",
-    "website": "TheDamel.com.",
+    "website": "https://www.TheDamel.com",
     "lat": "37.814256",
     "long": "-122.265272",
     "coords": "37.814256,-122.265272"
@@ -3390,7 +3390,7 @@
     "street": "2126 Center St.",
     "city": "Berkeley",
     "phone": "510756-3123",
-    "website": "TheHalalGuys.com.",
+    "website": "https://www.TheHalalGuys.com",
     "lat": "37.870126",
     "long": "-122.26719",
     "coords": "37.870126,-122.26719"
@@ -3402,7 +3402,7 @@
     "street": "4201 Market St.",
     "city": "Oakland",
     "phone": "510-922-1601",
-    "website": "TheKebaberyOakland.com.",
+    "website": "https://www.TheKebaberyOakland.com",
     "lat": "37.846916",
     "long": "-122.267209",
     "coords": "37.846916,-122.267209"
@@ -3414,7 +3414,7 @@
     "street": "347 14th St.",
     "city": "Oakland",
     "phone": "510-823-2332",
-    "website": "TheKon-TikiOakland.com.",
+    "website": "https://www.TheKon-TikiOakland.com",
     "lat": "37.803112",
     "long": "-122.268604",
     "coords": "37.803112,-122.268604"
@@ -3426,7 +3426,7 @@
     "street": "372 24th St.",
     "city": "Oakland",
     "phone": "510-835-5885",
-    "website": "TheLumpiaCompany.com.",
+    "website": "https://www.TheLumpiaCompany.com",
     "lat": "37.813405",
     "long": "-122.264579",
     "coords": "37.813405,-122.264579"
@@ -3438,7 +3438,7 @@
     "street": "4099 San Pablo Ave.",
     "city": "Emeryville",
     "phone": "510-652-2259",
-    "website": "theoakscorner.com/",
+    "website": "https://www.theoakscorner.com",
     "lat": "37.832134",
     "long": "-122.280507",
     "coords": "37.832134,-122.280507"
@@ -3450,7 +3450,7 @@
     "street": "4395 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-361-6498",
-    "website": "TheSaapAvenue.com.",
+    "website": "https://www.TheSaapAvenue.com",
     "lat": "37.830266",
     "long": "-122.247799",
     "coords": "37.830266,-122.247799"
@@ -3462,7 +3462,7 @@
     "street": "3425 Grand Ave.",
     "city": "Oakland",
     "phone": "510-843-7827",
-    "website": "TheStarOnGrand.com.",
+    "website": "https://www.TheStarOnGrand.com",
     "lat": "37.814322",
     "long": "-122.246585",
     "coords": "37.814322,-122.246585"
@@ -3474,7 +3474,7 @@
     "street": "1400 Park St.",
     "city": "Alameda",
     "phone": "510-832-7827",
-    "website": "TheStarOnPark.com.",
+    "website": "https://www.TheStarOnPark.com",
     "lat": "37.764274",
     "long": "-122.24254",
     "coords": "37.764274,-122.24254"
@@ -3486,7 +3486,7 @@
     "street": "2136 Oxford St.",
     "city": "Berkeley",
     "phone": "510-845-9900",
-    "website": "TheSunnySidecafe.com.",
+    "website": "https://www.TheSunnySidecafe.com",
     "lat": "37.870316",
     "long": "-122.266093",
     "coords": "37.870316,-122.266093"
@@ -3498,7 +3498,7 @@
     "street": "2214 MacArthur Blvd.",
     "city": "Oakland",
     "phone": "510- 842-8246",
-    "website": "TheVegHub.com.",
+    "website": "https://www.TheVegHub.com",
     "lat": "37.80063",
     "long": "-122.215719",
     "coords": "37.80063,-122.215719"
@@ -3510,7 +3510,7 @@
     "street": "5443 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-808-7315",
-    "website": "TheWellOrganicKitchen.com.",
+    "website": "https://www.TheWellOrganicKitchen.com",
     "lat": "37.839402",
     "long": "-122.262293",
     "coords": "37.839402,-122.262293"
@@ -3522,7 +3522,7 @@
     "street": "3853 Piedmont Ave.",
     "city": "Oakland",
     "phone": "510-879-7953",
-    "website": "TheWolfOakland.com/",
+    "website": "https://www.TheWolfOakland.com",
     "lat": "37.824713",
     "long": "-122.25511",
     "coords": "37.824713,-122.25511"
@@ -3534,7 +3534,7 @@
     "street": "1513 Shattuck Ave.",
     "city": "Berkeley",
     "phone": "510-540-7900",
-    "website": "Tigerlily-Berkeley.com.",
+    "website": "https://www.Tigerlily-Berkeley.com",
     "lat": "37.879812",
     "long": "-122.268896",
     "coords": "37.879812,-122.268896"
@@ -3546,7 +3546,7 @@
     "street": "4336 San Pablo Ave.",
     "city": "Emeryville",
     "phone": "510-595-1227",
-    "website": "Touch-of-Soul.business.site.",
+    "website": "https://www.Touch-of-Soul.business.site",
     "lat": "37.834291",
     "long": "-122.280678",
     "coords": "37.834291,-122.280678"
@@ -3570,7 +3570,7 @@
     "street": "2993 College Ave",
     "city": "Berkeley",
     "phone": "510-704-1474",
-    "website": "TrattoriaLaSiciliana.com/.",
+    "website": "https://www.TrattoriaLaSiciliana.com/",
     "lat": "37.856412",
     "long": "-122.252668",
     "coords": "37.856412,-122.252668"
@@ -3582,7 +3582,7 @@
     "street": "146 Grand Ave.",
     "city": "Oakland",
     "phone": "510-208-5678",
-    "website": "TrueBurgerOakland.com.",
+    "website": "https://www.TrueBurgerOakland.com",
     "lat": "37.811507",
     "long": "-122.264025",
     "coords": "37.811507,-122.264025"
@@ -3606,7 +3606,7 @@
     "street": "500 Lake Park Ave.",
     "city": "Oakland",
     "phone": "415-513-5120",
-    "website": "SFVeganMob.com/.",
+    "website": "https://www.SFVeganMob.com/",
     "lat": "37.810646",
     "long": "-122.24691",
     "coords": "37.810646,-122.24691"
@@ -3642,7 +3642,7 @@
     "street": "5959 Shellmound St.",
     "city": "Emeryville",
     "phone": "510-655-3398",
-    "website": "WazwanEmeryville.site.",
+    "website": "https://www.WazwanEmeryville.site",
     "lat": "37.841483",
     "long": "-122.293687",
     "coords": "37.841483,-122.293687"
@@ -3654,7 +3654,7 @@
     "street": "843 San Pablo Ave",
     "city": "Albany",
     "phone": "510-525-2791",
-    "website": "WhiteLotusThaiAlbany.com.",
+    "website": "https://www.WhiteLotusThaiAlbany.com",
     "lat": "37.890673",
     "long": "-122.298811",
     "coords": "37.890673,-122.298811"
@@ -3678,7 +3678,7 @@
     "street": "6317 College Ave.",
     "city": "Oakland",
     "phone": "510-654-6607",
-    "website": "WoodTavern.net.",
+    "website": "https://www.WoodTavern.net",
     "lat": "37.850452",
     "long": "-122.252609",
     "coords": "37.850452,-122.252609"
@@ -3690,7 +3690,7 @@
     "street": "1601 San Pablo Ave.",
     "city": "Oakland",
     "phone": "",
-    "website": "WorldFamousHotboys.com.",
+    "website": "https://www.WorldFamousHotboys.com",
     "lat": "37.806701",
     "long": "-122.272355",
     "coords": "37.806701,-122.272355"
@@ -3702,7 +3702,7 @@
     "street": "1916 Telegraph Ave.",
     "city": "Oakland",
     "phone": "510-986-0151",
-    "website": "XoloTaqueria.com.",
+    "website": "https://www.XoloTaqueria.com",
     "lat": "37.808229",
     "long": "-122.269566",
     "coords": "37.808229,-122.269566"
@@ -3714,7 +3714,7 @@
     "street": "3211 Grand Ave.",
     "city": "Oakland",
     "phone": "510-444-1771",
-    "website": "YangChowRestaurant.com.",
+    "website": "https://www.YangChowRestaurant.com",
     "lat": "37.812412",
     "long": "-122.247688",
     "coords": "37.812412,-122.247688"
@@ -3738,7 +3738,7 @@
     "street": "510 Embarcadero West",
     "city": "Oakland",
     "phone": "510-238-9200",
-    "website": "Yoshis.com.",
+    "website": "https://www.Yoshis.com",
     "lat": "37.795358",
     "long": "-122.276932",
     "coords": "37.795358,-122.276932"
@@ -3774,7 +3774,7 @@
     "street": "1298 65th St.",
     "city": "Emeryville",
     "phone": "510-853-1525",
-    "website": "YuzuRB.com.",
+    "website": "https://www.YuzuRB.com",
     "lat": "37.847164",
     "long": "-122.290553",
     "coords": "37.847164,-122.290553"
@@ -3786,7 +3786,7 @@
     "street": "3917 Grand Ave.",
     "city": "Oakland",
     "phone": "510-658-3226",
-    "website": "Zacharys.com.",
+    "website": "https://www.Zacharys.com",
     "lat": "37.818413",
     "long": "-122.245234",
     "coords": "37.818413,-122.245234"
@@ -3798,7 +3798,7 @@
     "street": "5801 College Ave.",
     "city": "Oakland",
     "phone": "510-655-6385",
-    "website": "Zacharys.com.",
+    "website": "https://www.Zacharys.com",
     "lat": "37.846278",
     "long": "-122.252162",
     "coords": "37.846278,-122.252162"
@@ -3810,7 +3810,7 @@
     "street": "1853 Solano Ave",
     "city": "Berkeley",
     "phone": "510-525-5950",
-    "website": "Zacharys.com.",
+    "website": "https://www.Zacharys.com",
     "lat": "37.89169",
     "long": "-122.278533",
     "coords": "37.89169,-122.278533"
@@ -3822,7 +3822,7 @@
     "street": "1133 Solano Ave",
     "city": "Albany",
     "phone": "510-898-1316",
-    "website": "zaytoon510.com.",
+    "website": "https://www.zaytoon510.com",
     "lat": "37.890521",
     "long": "-122.29773",
     "coords": "37.890521,-122.29773"
