@@ -1,0 +1,48 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.mapContainer {
+  height: 100vh;
+  width: 65vw;
+}
+
+.map-sidebar-container{
+  display: flex;
+}
+
+.sidebar {
+  background-color: #14181d;
+  height: 100vh;
+  overflow: scroll;
+  width: 35vw;
+}
+
+.takeout {
+  border-top: 3px solid #404442;
+  cursor: pointer;
+  margin: 1rem 1rem 1rem;
+  padding: .1rem 1rem 1rem;
+
+  h3 {
+    color: #27c375;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    margin-top: 16px;
+  }
+  
+  p {
+    color: white;
+    margin-bottom: 4px;
+    margin-top: 8px;
+  }
+  
+  a {
+    color: #abb7b1;
+    font-size: .8rem;
+  }
+}
+
+.takeout:hover {
+  background-color: #272b2d;
+}

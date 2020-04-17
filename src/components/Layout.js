@@ -1,26 +1,14 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
 
-import { MapboxGLMap } from ".";
-
-// Header disabled for now; will come back to it and make new component
-// const Header = styled("header")`
-//   width: 100vw;
-//   height: 80px;
-//   border-bottom: 2px solid #222;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
+import App from './App';
+import Header from './Header'
 
 const Layout = () => {
   return (
     <>
-      {/* <Header>
-        <h1>Mapbox GL Components</h1>
-      </Header> */}
+      <Header></Header>
       <main>
-        <MapboxGLMap />
+        <App />
       </main>
     </>
   );

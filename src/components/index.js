@@ -1,4 +1,4 @@
-export { default as MapboxGLMap } from "./MapboxGLMap";
+export { default as App } from "./App";
 // export { default as GeoJsonLayer } from "./GeoJsonLayer";
 // export { default as MarkerLayer } from "./MarkerLayer";
 // export { default as VectorTileLayer } from "./VectorTileLayer";
