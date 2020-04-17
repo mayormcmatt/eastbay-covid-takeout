@@ -31,7 +31,7 @@ class App extends Component {
         'features': []
       };
 
-      locationData.map((el) => {
+      locationData.map((el, i) => {
         allLocations.features.push({
           'type': 'Feature',
           'geometry': {
@@ -46,6 +46,7 @@ class App extends Component {
               <p><strong>Address:</strong> ${el.street} ${el.city}</p>
               <p><strong>Phone:</strong> ${el.phone}</p>
               <p><a href=${el.website} target=_blank>${el.website}</a></p>`,
+            'id': i,
             'name': el.name,
             'cuisine': el.cuisine,
             'website': el.website,
@@ -110,11 +111,16 @@ class App extends Component {
     //   .addTo(map);
   }
 
+  clickHandler = (id) => {
+    console.log(this.state.pointsData[id])
+    console.log(this.state.pointsData[id].properties.name)
+  }
+
   render() {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData}/>
+        <Sidebar data={this.state.pointsData} clickHandler={this.clickHandler}/>
       </div>
     )
   }

@@ -13,32 +13,36 @@
 
 .sidebar {
   background-color: #14181d;
-  padding: 2rem;
-  width: 35vw;
   height: 100vh;
   overflow: scroll;
+  width: 35vw;
 }
 
 .takeout {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #404442 ;
+  border-top: 3px solid #404442;
+  cursor: pointer;
+  margin: 1rem 1rem 1rem;
+  padding: .1rem 1rem 1rem;
+
+  h3 {
+    color: #27c375;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    margin-top: 16px;
+  }
+  
+  p {
+    color: white;
+    margin-bottom: 4px;
+    margin-top: 8px;
+  }
+  
+  a {
+    color: #abb7b1;
+    font-size: .8rem;
+  }
 }
 
-.takeout h3 {
-  font-size: 1.8rem;
-  color: #27c375;
-}
-
-.takeout p {
-  color: white;
-}
-
-.takeout a {
-  font-size: .8rem;
-  color: #abb7b1;
-}
-
-.takeout hr {
-  border-color: #27c375;
-  opacity: .3;
+.takeout:hover {
+  background-color: #272b2d;
 }
