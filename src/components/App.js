@@ -3,7 +3,7 @@ import mapboxgl, { Marker } from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/app.scss';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
-import Sidebar from '../components/Sidebar.js';
+import Sidebar from './Sidebar.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 
