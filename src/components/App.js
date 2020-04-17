@@ -105,12 +105,7 @@ class App extends Component {
       });
     });
 
-    // const popup = new mapboxgl.Popup({ closeOnClick: false })
-    //   .setLngLat([-122.25, 37.8])
-    //   .setHTML('<h1>Hello World!</h1>')
-    //   .addTo(map);
-
-    this.clickHandler = (id) => {
+    this.sideBarItemClickHandler = (id) => {
       const currentLat = parseFloat(this.state.pointsData[id].geometry.coordinates[1]);
       const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
       const coordinates = this.state.pointsData[id].geometry.coordinates;
@@ -135,7 +130,7 @@ class App extends Component {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData} clickHandler={this.clickHandler}/>
+        <Sidebar data={this.state.pointsData} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
       </div>
     )
   }
