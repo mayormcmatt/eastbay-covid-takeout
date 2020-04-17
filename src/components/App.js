@@ -109,11 +109,19 @@ class App extends Component {
     //   .setLngLat([-122.25, 37.8])
     //   .setHTML('<h1>Hello World!</h1>')
     //   .addTo(map);
-  }
 
-  clickHandler = (id) => {
-    console.log(this.state.pointsData[id])
-    console.log(this.state.pointsData[id].properties.name)
+    this.clickHandler = (id) => {
+      const currentLat = parseFloat(this.state.pointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
+      const flyParams = { 
+        bearing: 0,
+        center: [currentLng, currentLat],
+        zoom: 14,
+        speed: 0.3,
+        pitch: 0
+      }
+      map.flyTo(flyParams);
+    }
   }
 
   render() {
