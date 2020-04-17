@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import mapboxgl, { Marker } from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../styles/app.scss';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
@@ -113,14 +113,21 @@ class App extends Component {
     this.clickHandler = (id) => {
       const currentLat = parseFloat(this.state.pointsData[id].geometry.coordinates[1]);
       const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
-      const flyParams = { 
+      const coordinates = this.state.pointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.state.pointsData[id].properties.info;
+      const flyParams = {
         bearing: 0,
         center: [currentLng, currentLat],
         zoom: 14,
-        speed: 0.3,
+        speed: 0.7,
         pitch: 0
       }
+
       map.flyTo(flyParams);
+      new mapboxgl.Popup()
+        .setLngLat(coordinates)
+        .setHTML(currentRestaurantInfo)
+        .addTo(map);
     }
   }
 
