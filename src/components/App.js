@@ -4,7 +4,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 import Sidebar from '../components/Sidebar.js';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
+// mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
+// For dev purposes only, uncomment previous and comment out the following
+mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
 class App extends Component {
   state = {
