@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/sidebar.scss';
 
 class Takeout extends Component {
   render() {
@@ -9,7 +8,10 @@ class Takeout extends Component {
       return (
         <div className="takeout" id={id} onClick={this.props.sideBarItemClickHandler.bind(this, id)}>
           <h3>{properties.name}</h3>
+          <p>{properties.takeout_option}</p>
           <p><strong>Cuisine: </strong>{properties.cuisine}</p>
+          <p><strong>Address: </strong>{properties.street}, {properties.city}</p>
+          <p><strong>Phone: </strong>{properties.phone}</p>
           <a href={properties.website} target="_blank" rel="noopener noreferrer"> {properties.website}</a>
         </div>
       )

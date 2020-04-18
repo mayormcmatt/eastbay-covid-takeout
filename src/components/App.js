@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import '../styles/app.scss';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 import Sidebar from '../components/Sidebar.js';
 
@@ -25,6 +24,16 @@ class App extends Component {
       zoom: this.state.mapState.zoom
     });
 
+    const setPopup = (c, i, m) => {
+      const popup = new mapboxgl.Popup()
+      .setLngLat(c)
+      .setHTML(i)
+      .setMaxWidth('320px')
+      .addTo(m);
+
+      return popup;
+    }
+
     const provideDataPoints = () => {
       let allLocations = {
         'type': 'FeatureCollection',
@@ -40,20 +49,24 @@ class App extends Component {
           },
           'properties': {
             'info':
-              `<strong>${el.name}</strong>
-              <p><strong>Cuisine:</strong> ${el.cuisine}</p>
+              `<h2>${el.name}</h2>
               <p>${el.takout_option}</p>
+              <p><strong>Cuisine:</strong> ${el.cuisine}</strong></p>
               <p><strong>Address:</strong> ${el.street} ${el.city}</p>
               <p><strong>Phone:</strong> ${el.phone}</p>
-              <p><a href=${el.website} target=_blank>${el.website}</a></p>`,
+              <a href=${el.website} target=_blank>${el.website}</a>`,
             'id': i,
             'name': el.name,
             'cuisine': el.cuisine,
+            'street': el.street,
+            'city': el.city,
+            'phone': el.phone,
             'website': el.website,
             'icon': 'restaurant'
           }
         })
       });
+
       this.setState({pointsData: allLocations.features});
       return allLocations;
     }
@@ -88,10 +101,7 @@ class App extends Component {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
 
-        new mapboxgl.Popup()
-          .setLngLat(coordinates)
-          .setHTML(info)
-          .addTo(map);
+        setPopup(coordinates, info, map);
       });
 
       // Change the cursor to a pointer when the mouse is over the places layer.
@@ -110,6 +120,7 @@ class App extends Component {
       const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
       const coordinates = this.state.pointsData[id].geometry.coordinates;
       const currentRestaurantInfo = this.state.pointsData[id].properties.info;
+      const popupIsPopped = document.querySelector('.mapboxgl-popup');
       const flyParams = {
         bearing: 0,
         center: [currentLng, currentLat],
@@ -118,11 +129,11 @@ class App extends Component {
         pitch: 0
       }
 
+      if (popupIsPopped) {
+        popupIsPopped.remove();
+      }
       map.flyTo(flyParams);
-      new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(currentRestaurantInfo)
-        .addTo(map);
+      setPopup(coordinates, currentRestaurantInfo, map);
     }
   }
 
