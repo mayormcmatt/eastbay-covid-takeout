@@ -4,21 +4,23 @@
 
 .map-sidebar-container {
   display: flex;
+  flex-direction: column;
 
-  @media (max-width: 800px) {
-      flex-direction: column;
-    }
+  @include bp(m) {
+    flex-direction: row;
+  }
 
   .sidebar {
     background-color: white;
-    height: 100vh;
+    border-top: 2px solid black;
+    height: 45vh;
     overflow: scroll;
-    width: 35vw;
-
-    @media (max-width: 800px) {
-      height: 45vh;
-      width: 100vw;
-      border-top: 2px solid black;
+    width: 100vw;
+    
+    @include bp(m) {
+      border-top: 0 solid black;
+      height: 100vh;
+      width: 35vw;
     }
   }
     
