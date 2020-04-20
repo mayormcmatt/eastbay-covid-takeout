@@ -6,4 +6,10 @@
     margin: 10px 0;
     overflow-wrap: break-word;
   }
+
+  @media (max-width: 800px) {
+    p, a {
+      display: none;
+    }
+  }
 }

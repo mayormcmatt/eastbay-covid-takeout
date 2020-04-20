@@ -1,4 +1,9 @@
 .mapContainer {
   height: calc(100vh - 60px);
   width: 65vw;
+
+  @media (max-width: 800px) {
+    height: calc(55vh - 60px);
+    width: 100vw;
+  }
 }
