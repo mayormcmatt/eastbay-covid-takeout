@@ -18,16 +18,6 @@ class App extends Component {
     pointsData: []
   }
 
-  setPopup = (c, i, m) => {
-    const popup = new mapboxgl.Popup()
-    .setLngLat(c)
-    .setHTML(i)
-    .setMaxWidth('320px')
-    .addTo(m);
-
-    return popup;
-  }
-
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -73,6 +63,16 @@ class App extends Component {
       return allLocations;
     }
 
+    const setPopup = (c, i, m) => {
+      const popup = new mapboxgl.Popup()
+      .setLngLat(c)
+      .setHTML(i)
+      .setMaxWidth('320px')
+      .addTo(m);
+
+      return popup;
+    }
+
     map.on('load', function () {
       map.addSource('points', {
         'type': 'geojson',
@@ -103,7 +103,7 @@ class App extends Component {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
 
-        this.setPopup(coordinates, info, map);
+        setPopup(coordinates, info, map);
       });
 
       // Change the cursor to a pointer when the mouse is over the places layer.
@@ -135,7 +135,7 @@ class App extends Component {
         popupIsPopped.remove();
       }
       map.flyTo(flyParams);
-      this.setPopup(coordinates, currentRestaurantInfo, map);
+      setPopup(coordinates, currentRestaurantInfo, map);
     }
   }
 
