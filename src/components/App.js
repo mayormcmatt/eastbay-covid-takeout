@@ -5,7 +5,7 @@ import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 import Sidebar from '../components/Sidebar.js';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
-// For dev purposes only, uncomment previous and comment out the following
+// TODO: Figure out how to use ENV variables to protect the Mapbox key
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
 class App extends Component {
@@ -18,6 +18,16 @@ class App extends Component {
     pointsData: []
   }
 
+  setPopup = (c, i, m) => {
+    const popup = new mapboxgl.Popup()
+    .setLngLat(c)
+    .setHTML(i)
+    .setMaxWidth('320px')
+    .addTo(m);
+
+    return popup;
+  }
+
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -25,16 +35,6 @@ class App extends Component {
       center: [this.state.mapState.lng, this.state.mapState.lat],
       zoom: this.state.mapState.zoom
     });
-
-    const setPopup = (c, i, m) => {
-      const popup = new mapboxgl.Popup()
-      .setLngLat(c)
-      .setHTML(i)
-      .setMaxWidth('320px')
-      .addTo(m);
-
-      return popup;
-    }
 
     const provideDataPoints = () => {
       let allLocations = {
@@ -103,7 +103,7 @@ class App extends Component {
           coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         }
 
-        setPopup(coordinates, info, map);
+        this.setPopup(coordinates, info, map);
       });
 
       // Change the cursor to a pointer when the mouse is over the places layer.
@@ -135,7 +135,7 @@ class App extends Component {
         popupIsPopped.remove();
       }
       map.flyTo(flyParams);
-      setPopup(coordinates, currentRestaurantInfo, map);
+      this.setPopup(coordinates, currentRestaurantInfo, map);
     }
   }
 
