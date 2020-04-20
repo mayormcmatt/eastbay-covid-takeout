@@ -42,13 +42,14 @@ class App extends Component {
           'properties': {
             'info':
               `<h2>${el.name}</h2>
-              <p>${el.takout_option}</p>
+              <p>${el.takeout_option}</p>
               <p><strong>Cuisine:</strong> ${el.cuisine}</strong></p>
               <p><strong>Address:</strong> ${el.street} ${el.city}</p>
               <p><strong>Phone:</strong> ${el.phone}</p>
               <a href=${el.website} target=_blank>${el.website}</a>`,
             'id': i,
             'name': el.name,
+            'takeout_option': el.takeout_option,
             'cuisine': el.cuisine,
             'street': el.street,
             'city': el.city,
