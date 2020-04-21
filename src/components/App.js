@@ -26,8 +26,24 @@ class App extends Component {
         lat: 37.8,
         zoom: 13
       },
-      pointsData: []
+      pointsData: [],
+      dropdownItems: []
     }
+
+    this.setCuisineFilterDropdown = () => {
+      let results = [];
+      this.state.pointsData.map(e => {
+        if(!results.includes(e.properties.cuisine)) {
+          results.push(e.properties.cuisine)
+        }
+      });
+
+      return this.setState({dropdownItems: results})
+    }
+
+    // this.filterByCuisine = () => {
+
+    // }
   }
 
   componentDidMount() {
@@ -45,7 +61,7 @@ class App extends Component {
       };
 
       locationData.map((el, i) => {
-        allLocations.features.push({
+        return allLocations.features.push({
           'type': 'Feature',
           'geometry': {
             'type': 'Point',
@@ -73,6 +89,7 @@ class App extends Component {
       });
 
       this.setState({pointsData: allLocations.features});
+      this.setCuisineFilterDropdown();
       return allLocations;
     }
 
@@ -146,7 +163,7 @@ class App extends Component {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData} thingHandler={this.thingHandler} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
+        <Sidebar data={this.state.pointsData} dropdownitems={this.state.dropdownItems} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
       </div>
     )
   }

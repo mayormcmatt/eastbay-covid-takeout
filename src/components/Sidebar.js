@@ -16,7 +16,7 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <input 
+        <input
           type="text"
           value={this.state.searchByName}
           placeholder="Search by restaurant name"
@@ -27,11 +27,33 @@ class Search extends Component {
   }
 }
 
-class Filter extends Component {
+class DropdownItems extends Component {
+  // On click, take value of dropdown item
+  // Send that up to App and/or trigger function
+  // Filter pointsData in App based on value
   render() {
     return (
+      <ul>
+        {this.props.dropdownitems.map((item, i) => {
+          return (
+            <li key={i}>{item}</li>
+          )
+        })}
+      </ul>
+    )
+  }
+}
+
+class Filter extends Component {
+  render() {
+    // console.log(this.props.dropdownitems, 'inside Filter')
+    return (
       <div className="filter">
-        <div className="temp">Filter by cuisine (dropdown)</div>
+        <div dropdownitems={this.props.dropdownitems} className="temp">
+          <div>
+            <DropdownItems dropdownitems={this.props.dropdownitems} />
+          </div>
+        </div>
       </div>
     )
   }
@@ -39,11 +61,12 @@ class Filter extends Component {
 
 class Sidebar extends Component {
   render() {
+    // console.log(this.props.data, 'Inside Sidebar')
     return (
       <div className="sidebar-container">
         <div className="search-filter-container">
           <Search />
-          <Filter thingHandler={this.props.thingHandler} />
+          <Filter dropdownitems={this.props.dropdownitems} />
         </div>
         <TakeoutList data={this.props.data} sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
       </div>
