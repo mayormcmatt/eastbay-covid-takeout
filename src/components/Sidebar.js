@@ -2,10 +2,26 @@ import React, { Component } from 'react';
 import TakeoutList from '../components/TakeoutList.js';
 
 class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchByName: ''
+    }
+  }
+
+  searchHandler = (e) => {
+    this.setState({searchByName: e.target.value});
+  }
+
   render() {
     return (
       <div className="search">
-        <div className="temp">Search by restaurant name</div>
+        <input 
+          type="text"
+          value={this.state.searchByName}
+          placeholder="Search by restaurant name"
+          onChange={this.searchHandler}
+        ></input>
       </div>
     )
   }
