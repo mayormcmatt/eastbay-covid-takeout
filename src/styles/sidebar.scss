@@ -17,30 +17,36 @@
   }
   
   .search {
-    height: 80px;
     padding: 10px;
     position: absolute;
     width: 35vw;
+    z-index: 2;
   
-    .temp {
+    input[type=text] {
       background-color: white;
-      border: 6px solid #27c375;
+      border: 6px solid #7B8585;
       color: #7B8585;
       font-size: 15px;
       height: 50px;
       padding: 10px 12px;
+      position: relative;
+      width: 100%;
+    }
+
+    input[type=text]:focus {
+      border: 6px solid #27c375;
+      outline: none;
     }
   }
 
   .filter {
-    height: 80px;
     padding: 10px;
     position: absolute;
     width: 35vw;
   
     .temp {
       background-color: white;
-      border: 6px solid #27c375;
+      border: 6px solid #7B8585;
       color: #7B8585;
       font-size: 15px;
       height: 50px;
