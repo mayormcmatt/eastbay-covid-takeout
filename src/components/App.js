@@ -139,7 +139,6 @@ class App extends Component {
       }
       map.flyTo(flyParams);
       setPopup(coordinates, currentRestaurantInfo, map);
-      // console.log(this)
     }
   }
 
@@ -147,7 +146,7 @@ class App extends Component {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
+        <Sidebar data={this.state.pointsData} thingHandler={this.thingHandler} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
       </div>
     )
   }

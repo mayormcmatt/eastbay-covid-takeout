@@ -27,7 +27,7 @@ class Sidebar extends Component {
       <div className="sidebar-container">
         <div className="search-filter-container">
           <Search />
-          <Filter />
+          <Filter thingHandler={this.props.thingHandler} />
         </div>
         <TakeoutList data={this.props.data} sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
       </div>
