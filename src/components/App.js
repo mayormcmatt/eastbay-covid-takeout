@@ -8,14 +8,26 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpc
 // TODO: Figure out how to use ENV variables to protect the Mapbox key
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
+const setPopup = (c, i, m) => {
+  const popup = new mapboxgl.Popup()
+  .setLngLat(c)
+  .setHTML(i)
+  .setMaxWidth('320px')
+  .addTo(m);
+
+  return popup;
+}
 class App extends Component {
-  state = {
-    mapState: {
-      lng: -122.25,
-      lat: 37.8,
-      zoom: 13
-    },
-    pointsData: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      mapState: {
+        lng: -122.25,
+        lat: 37.8,
+        zoom: 13
+      },
+      pointsData: []
+    }
   }
 
   componentDidMount() {
@@ -62,16 +74,6 @@ class App extends Component {
 
       this.setState({pointsData: allLocations.features});
       return allLocations;
-    }
-
-    const setPopup = (c, i, m) => {
-      const popup = new mapboxgl.Popup()
-      .setLngLat(c)
-      .setHTML(i)
-      .setMaxWidth('320px')
-      .addTo(m);
-
-      return popup;
     }
 
     map.on('load', function () {
@@ -137,6 +139,7 @@ class App extends Component {
       }
       map.flyTo(flyParams);
       setPopup(coordinates, currentRestaurantInfo, map);
+      // console.log(this)
     }
   }
 
