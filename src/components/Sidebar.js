@@ -1,48 +1,34 @@
 import React, { Component } from 'react';
+import TakeoutList from '../components/TakeoutList.js';
 
-class Takeout extends Component {
+class Search extends Component {
   render() {
-    if (this.props.data) {
-      const { properties } = this.props.data;
-      const id = properties.id;
-      return (
-        <div className="takeout" id={id} onClick={this.props.sideBarItemClickHandler.bind(this, id)}>
-          <h3>{properties.name}</h3>
-          <p>{properties.takeout_option}</p>
-          <p><strong>Cuisine: </strong>{properties.cuisine}</p>
-          <p><strong>Address: </strong>{properties.street}, {properties.city}</p>
-          <p><strong>Phone: </strong>{properties.phone}</p>
-          <a href={properties.website} target="_blank" rel="noopener noreferrer"> {properties.website}</a>
-        </div>
-      )
-    } else {
-      return (
-        <div></div>
-      )
-    }
+    return (
+      <div className="search">
+        <div className="temp">Search by restaurant name</div>
+      </div>
+    )
   }
 }
 
-class TakeoutList extends Component {
+class Filter extends Component {
   render() {
-    if (this.props.data) {
-      return (
-        this.props.data.map((takeout, i) => (
-          <Takeout key={i} data={takeout} sideBarItemClickHandler={this.props.sideBarItemClickHandler} />
-        ))
-      )
-    } else {
-      return (
-        <div></div>
-      )
-    }
+    return (
+      <div className="filter">
+        <div className="temp">Filter by cuisine (dropdown)</div>
+      </div>
+    )
   }
 }
 
 class Sidebar extends Component {
   render() {
     return (
-      <div className="sidebar">
+      <div className="sidebar-container">
+        <div className="search-filter-container">
+          <Search />
+          <Filter />
+        </div>
         <TakeoutList data={this.props.data} sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
       </div>
     )
