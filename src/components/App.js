@@ -163,7 +163,11 @@ class App extends Component {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData} dropdownitems={this.state.dropdownItems} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
+
+        <Sidebar
+          data={this.state.pointsData}
+          dropdownitems={this.state.dropdownItems}
+          sideBarItemClickHandler={this.sideBarItemClickHandler}/>
       </div>
     )
   }

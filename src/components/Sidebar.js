@@ -28,31 +28,47 @@ class Search extends Component {
 }
 
 class DropdownItems extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      menuViz: false
+    }
+  }
+
+  showMenu = () => {
+    const doesShow = this.state.menuViz;
+    this.setState({menuViz: !doesShow});
+  }
+
   // On click, take value of dropdown item
   // Send that up to App and/or trigger function
   // Filter pointsData in App based on value
   render() {
     return (
-      <ul>
-        {this.props.dropdownitems.map((item, i) => {
-          return (
-            <li key={i}>{item}</li>
-          )
-        })}
-      </ul>
+      <div onClick={this.showMenu}>
+        {this.state.menuViz ? (
+          <ul className="dropdown-list">
+            {this.props.dropdownitems.map((item, i) => {
+              return (
+                <li className="dropdown-list__item" key={i}>{item}</li>
+              )
+            })}
+          </ul>
+        ): (null)}
+      </div>
     )
   }
 }
 
 class Filter extends Component {
   render() {
-    // console.log(this.props.dropdownitems, 'inside Filter')
     return (
       <div className="filter">
-        <div dropdownitems={this.props.dropdownitems} className="temp">
-          <div>
-            <DropdownItems dropdownitems={this.props.dropdownitems} />
-          </div>
+        <div className="dropdown-container">
+          <DropdownItems
+            dropdownitems={this.props.dropdownitems}
+          />
         </div>
       </div>
     )
@@ -61,14 +77,19 @@ class Filter extends Component {
 
 class Sidebar extends Component {
   render() {
-    // console.log(this.props.data, 'Inside Sidebar')
     return (
       <div className="sidebar-container">
         <div className="search-filter-container">
           <Search />
-          <Filter dropdownitems={this.props.dropdownitems} />
+
+          <Filter
+            dropdownitems={this.props.dropdownitems}
+          />
         </div>
-        <TakeoutList data={this.props.data} sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
+
+        <TakeoutList
+          data={this.props.data}
+          sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
       </div>
     )
   }
