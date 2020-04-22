@@ -27,6 +27,7 @@ class App extends Component {
         zoom: 13
       },
       pointsData: [],
+      allPointsData: [],
       dropdownItems: []
     }
 
@@ -41,9 +42,12 @@ class App extends Component {
       return this.setState({dropdownItems: results})
     }
 
-    // this.filterByCuisine = () => {
-
-    // }
+    this.filterByCuisine = (cuisine) => {      
+      const results = this.state.allPointsData.filter(item => {
+        return item.properties.cuisine === cuisine
+      });
+      this.setState({ pointsData: results})
+    }
   }
 
   componentDidMount() {
@@ -88,7 +92,10 @@ class App extends Component {
         })
       });
 
-      this.setState({pointsData: allLocations.features});
+      this.setState({
+        pointsData: allLocations.features, 
+        allPointsData: allLocations.features
+      });
       this.setCuisineFilterDropdown();
       return allLocations;
     }
@@ -138,10 +145,10 @@ class App extends Component {
     });
 
     this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.state.pointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
-      const coordinates = this.state.pointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.state.pointsData[id].properties.info;
+      const currentLat = parseFloat(this.state.allPointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
+      const coordinates = this.state.allPointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
       const popupIsPopped = document.querySelector('.mapboxgl-popup');
       const flyParams = {
         bearing: 0,
@@ -167,7 +174,8 @@ class App extends Component {
         <Sidebar
           data={this.state.pointsData}
           dropdownitems={this.state.dropdownItems}
-          sideBarItemClickHandler={this.sideBarItemClickHandler}/>
+          sideBarItemClickHandler={this.sideBarItemClickHandler}
+          dropdownHandler={this.filterByCuisine}/>
       </div>
     )
   }
