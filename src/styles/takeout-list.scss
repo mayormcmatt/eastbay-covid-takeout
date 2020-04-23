@@ -1,0 +1,46 @@
+.takeout-list {
+  background-color: white;
+  border-top: 2px solid black;
+  height: 45vh;
+  overflow: scroll;
+  width: 100vw;
+  
+  @include bp(m) {
+    border-top: 0 solid black;
+    height: calc(100vh - 180px);
+    width: 35vw;
+  }
+
+  .takeout {
+    border-bottom: 2px solid #404442;
+    cursor: pointer;
+    margin-left: 0;
+    padding: 1rem 1rem 1rem 2rem;
+  
+    h3 {
+      // color: #27c375;
+      color: #404442;
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      margin-top: 0;
+    }
+  
+    p {
+      // color: white;
+      color: #404442;
+      margin-bottom: 4px;
+      margin-top: 8px;
+    }
+  
+    a {
+      // color: #abb7b1;
+      color: #404442;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  .takeout:hover {
+    background-color: #27c375;
+  }
+}

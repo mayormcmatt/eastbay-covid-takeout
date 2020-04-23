@@ -8,14 +8,57 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpc
 // TODO: Figure out how to use ENV variables to protect the Mapbox key
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
+const setPopup = (c, i, m) => {
+  const popup = new mapboxgl.Popup()
+  .setLngLat(c)
+  .setHTML(i)
+  .setMaxWidth('320px')
+  .addTo(m);
+
+  return popup;
+}
 class App extends Component {
-  state = {
-    mapState: {
-      lng: -122.25,
-      lat: 37.8,
-      zoom: 13
-    },
-    pointsData: []
+  constructor(props) {
+    super(props);
+    this.state = {
+      mapState: {
+        lng: -122.25,
+        lat: 37.8,
+        zoom: 13
+      },
+      pointsData: [],
+      allPointsData: [],
+      dropdownItems: [],
+      cuisineApp: 'Search By Cuisine'
+    }
+
+    this.populateCuisineFilterDropdown = () => {
+      let results = [];
+      this.state.pointsData.forEach(e => {
+        if(!results.includes(e.properties.cuisine)) {
+          results.push(e.properties.cuisine)
+        }
+      });
+
+      return this.setState({dropdownItems: results})
+    }
+
+    this.filterByCuisine = (cuisine) => {
+      const results = this.state.allPointsData.filter(item => {
+        return item.properties.cuisine === cuisine
+      });
+
+      this.setState({
+        pointsData: results,
+        cuisineApp: cuisine
+      })
+    }
+
+    this.clearFilterHandler = () => {
+      const allPoints = this.state.allPointsData;
+      this.setState({pointsData: allPoints});
+      this.setState({cuisineApp: 'Search By Cuisine'});
+    }
   }
 
   componentDidMount() {
@@ -33,7 +76,7 @@ class App extends Component {
       };
 
       locationData.map((el, i) => {
-        allLocations.features.push({
+        return allLocations.features.push({
           'type': 'Feature',
           'geometry': {
             'type': 'Point',
@@ -60,18 +103,34 @@ class App extends Component {
         })
       });
 
-      this.setState({pointsData: allLocations.features});
+      this.setState({
+        pointsData: allLocations.features,
+        allPointsData: allLocations.features
+      });
+      this.populateCuisineFilterDropdown();
       return allLocations;
     }
 
-    const setPopup = (c, i, m) => {
-      const popup = new mapboxgl.Popup()
-      .setLngLat(c)
-      .setHTML(i)
-      .setMaxWidth('320px')
-      .addTo(m);
+    this.sideBarItemClickHandler = (id) => {
+      const currentLat = parseFloat(this.state.allPointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
+      const coordinates = this.state.allPointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
+      const popupIsPopped = document.querySelector('.mapboxgl-popup');
+      const flyParams = {
+        bearing: 0,
+        center: [currentLng, currentLat],
+        zoom: 14,
+        speed: 0.7,
+        pitch: 0
+      }
 
-      return popup;
+      if (popupIsPopped) {
+        popupIsPopped.remove();
+      }
+
+      map.flyTo(flyParams);
+      setPopup(coordinates, currentRestaurantInfo, map);
     }
 
     map.on('load', function () {
@@ -95,56 +154,42 @@ class App extends Component {
           'text-anchor': 'top'
         }
       });
-
-      map.on('click', 'points', function (e) {
-        let coordinates = e.features[0].geometry.coordinates.slice();
-        let info = e.features[0].properties.info;
-
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        setPopup(coordinates, info, map);
-      });
-
-      // Change the cursor to a pointer when the mouse is over the places layer.
-      map.on('mouseenter', 'points', function () {
-        map.getCanvas().style.cursor = 'pointer';
-      });
-
-      // Change it back to a pointer when it leaves.
-      map.on('mouseleave', 'points', function () {
-        map.getCanvas().style.cursor = '';
-      });
     });
 
-    this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.state.pointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
-      const coordinates = this.state.pointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.state.pointsData[id].properties.info;
-      const popupIsPopped = document.querySelector('.mapboxgl-popup');
-      const flyParams = {
-        bearing: 0,
-        center: [currentLng, currentLat],
-        zoom: 14,
-        speed: 0.7,
-        pitch: 0
+    map.on('click', 'points', function (e) {
+      let coordinates = e.features[0].geometry.coordinates.slice();
+      let info = e.features[0].properties.info;
+
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
 
-      if (popupIsPopped) {
-        popupIsPopped.remove();
-      }
-      map.flyTo(flyParams);
-      setPopup(coordinates, currentRestaurantInfo, map);
-    }
+      setPopup(coordinates, info, map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'points', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'points', function () {
+      map.getCanvas().style.cursor = '';
+    });
   }
 
   render() {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
+
+        <Sidebar
+          cuisine={this.state.cuisineApp}
+          data={this.state.pointsData}
+          dropdownitems={this.state.dropdownItems}
+          sideBarItemClickHandler={this.sideBarItemClickHandler}
+          dropdownHandler={this.filterByCuisine}
+          clearFilterHandler={this.clearFilterHandler}/>
       </div>
     )
   }
