@@ -28,19 +28,16 @@
       color: #7B8585;
       font-size: 15px;
       height: 50px;
+      padding-left: 10px;
       position: relative;
+      transition: 250ms;
       width: 100%;
     }
 
+    input[type=text]:hover,
     input[type=text]:focus {
       border: 6px solid #27c375;
       outline: none;
     }
-  }
-
-  .filter {
-    padding: 10px;
-    position: absolute;
-    width: 35vw;
   }
 }

@@ -46,7 +46,8 @@ class DropdownItems extends Component {
   // Filter pointsData in App based on value
   render() {
     return (
-      <div onClick={this.showMenu}>
+      <div className="description" onClick={this.showMenu}>
+        {this.props.cuisine}
         {this.state.menuViz ? (
           <ul className="dropdown-list">
             {this.props.dropdownitems.map((item, i) => {
@@ -71,6 +72,7 @@ class Filter extends Component {
       <div className="filter">
         <div className="dropdown-container">
           <DropdownItems
+            cuisine={this.props.cuisine}
             dropdownitems={this.props.dropdownitems}
             dropdownHandler={this.props.dropdownHandler}
           />
@@ -88,6 +90,7 @@ class Sidebar extends Component {
           <Search />
 
           <Filter
+            cuisine={this.props.cuisine}
             dropdownitems={this.props.dropdownitems}
             dropdownHandler={this.props.dropdownHandler}
           />

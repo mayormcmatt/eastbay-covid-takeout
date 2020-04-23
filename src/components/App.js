@@ -28,7 +28,8 @@ class App extends Component {
       },
       pointsData: [],
       allPointsData: [],
-      dropdownItems: []
+      dropdownItems: [],
+      cuisineApp: 'Search By Cuisine'
     }
 
     this.setCuisineFilterDropdown = () => {
@@ -46,7 +47,10 @@ class App extends Component {
       const results = this.state.allPointsData.filter(item => {
         return item.properties.cuisine === cuisine
       });
-      this.setState({ pointsData: results})
+      this.setState({ 
+        pointsData: results,
+        cuisineApp: cuisine
+      })
     }
 
     this.thing = (map) => {
@@ -179,6 +183,7 @@ class App extends Component {
         <div ref={el => this.mapContainer = el} className='mapContainer' />
 
         <Sidebar
+          cuisine={this.state.cuisineApp}
           data={this.state.pointsData}
           dropdownitems={this.state.dropdownItems}
           sideBarItemClickHandler={this.sideBarItemClickHandler}
