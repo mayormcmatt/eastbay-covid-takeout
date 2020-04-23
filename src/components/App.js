@@ -32,7 +32,7 @@ class App extends Component {
       cuisineApp: 'Search By Cuisine'
     }
 
-    this.setCuisineFilterDropdown = () => {
+    this.populateCuisineFilterDropdown = () => {
       let results = [];
       this.state.pointsData.forEach(e => {
         if(!results.includes(e.properties.cuisine)) {
@@ -47,14 +47,17 @@ class App extends Component {
       const results = this.state.allPointsData.filter(item => {
         return item.properties.cuisine === cuisine
       });
-      this.setState({ 
+
+      this.setState({
         pointsData: results,
         cuisineApp: cuisine
       })
     }
 
-    this.thing = (map) => {
-      console.log(map);
+    this.clearFilterHandler = () => {
+      const allPoints = this.state.allPointsData;
+      this.setState({pointsData: allPoints});
+      this.setState({cuisineApp: 'Search By Cuisine'});
     }
   }
 
@@ -65,8 +68,6 @@ class App extends Component {
       center: [this.state.mapState.lng, this.state.mapState.lat],
       zoom: this.state.mapState.zoom
     });
-
-    this.thing(map);
 
     const provideDataPoints = () => {
       let allLocations = {
@@ -106,7 +107,7 @@ class App extends Component {
         pointsData: allLocations.features,
         allPointsData: allLocations.features
       });
-      this.setCuisineFilterDropdown();
+      this.populateCuisineFilterDropdown();
       return allLocations;
     }
 
@@ -187,7 +188,8 @@ class App extends Component {
           data={this.state.pointsData}
           dropdownitems={this.state.dropdownItems}
           sideBarItemClickHandler={this.sideBarItemClickHandler}
-          dropdownHandler={this.filterByCuisine}/>
+          dropdownHandler={this.filterByCuisine}
+          clearFilterHandler={this.clearFilterHandler}/>
       </div>
     )
   }
