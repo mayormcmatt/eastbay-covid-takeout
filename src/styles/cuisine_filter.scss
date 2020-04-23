@@ -40,19 +40,24 @@
         -webkit-column-gap: 20px;
         column-count: 4;
         column-gap: 20px;
-        height: 450px;
+        height: 610px;
         left: -135px;
-        padding: 30px;
+        padding: 20px;
         top: 30px;
         width: 800px;
       }
 
       &__item {
         cursor: pointer;
-  
+
         @include bp(m) {
           font-size: 16px;
-          padding: 4px;
+          padding: 0;
+        }
+
+        &:hover {
+          background-color: #27c375;
+          color: #fff;
         }
       }
     }
