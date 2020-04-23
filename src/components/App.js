@@ -31,34 +31,34 @@ class App extends Component {
       dropdownItems: [],
       cuisineApp: 'Search By Cuisine'
     }
+  }
 
-    this.populateCuisineFilterDropdown = () => {
-      let results = [];
-      this.state.pointsData.forEach(e => {
-        if(!results.includes(e.properties.cuisine)) {
-          results.push(e.properties.cuisine)
-        }
-      });
+  populateCuisineFilterDropdown = () => {
+    let results = [];
+    this.state.pointsData.forEach(e => {
+      if(!results.includes(e.properties.cuisine)) {
+        results.push(e.properties.cuisine)
+      }
+    });
 
-      return this.setState({dropdownItems: results})
-    }
+    return this.setState({dropdownItems: results})
+  }
 
-    this.filterByCuisine = (cuisine) => {
-      const results = this.state.allPointsData.filter(item => {
-        return item.properties.cuisine === cuisine
-      });
+  filterByCuisine = (cuisine) => {
+    const results = this.state.allPointsData.filter(item => {
+      return item.properties.cuisine === cuisine
+    });
 
-      this.setState({
-        pointsData: results,
-        cuisineApp: cuisine
-      })
-    }
+    this.setState({
+      pointsData: results,
+      cuisineApp: cuisine
+    })
+  }
 
-    this.clearFilterHandler = () => {
-      const allPoints = this.state.allPointsData;
-      this.setState({pointsData: allPoints});
-      this.setState({cuisineApp: 'Search By Cuisine'});
-    }
+  clearFilterHandler = () => {
+    const allPoints = this.state.allPointsData;
+    this.setState({pointsData: allPoints});
+    this.setState({cuisineApp: 'Search By Cuisine'});
   }
 
   componentDidMount() {
