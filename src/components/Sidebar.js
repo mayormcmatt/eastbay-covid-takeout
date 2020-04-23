@@ -51,8 +51,8 @@ class DropdownItems extends Component {
           <ul className="dropdown-list">
             {this.props.dropdownitems.map((item, i) => {
               return (
-                <li 
-                  className="dropdown-list__item" 
+                <li
+                  className="dropdown-list__item"
                   key={i}
                   onClick={this.props.dropdownHandler.bind(this, item)}
                 >{item}</li>

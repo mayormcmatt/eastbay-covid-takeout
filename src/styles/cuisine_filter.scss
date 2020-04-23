@@ -35,6 +35,8 @@
     }
 
     &__item {
+      cursor: pointer;
+
       @include bp(m) {
         font-size: 16px;
         padding: 4px;

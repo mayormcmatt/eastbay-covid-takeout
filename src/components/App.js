@@ -42,11 +42,15 @@ class App extends Component {
       return this.setState({dropdownItems: results})
     }
 
-    this.filterByCuisine = (cuisine) => {      
+    this.filterByCuisine = (cuisine) => {
       const results = this.state.allPointsData.filter(item => {
         return item.properties.cuisine === cuisine
       });
       this.setState({ pointsData: results})
+    }
+
+    this.thing = (map) => {
+      console.log(map);
     }
   }
 
@@ -57,6 +61,8 @@ class App extends Component {
       center: [this.state.mapState.lng, this.state.mapState.lat],
       zoom: this.state.mapState.zoom
     });
+
+    this.thing(map);
 
     const provideDataPoints = () => {
       let allLocations = {
@@ -93,11 +99,33 @@ class App extends Component {
       });
 
       this.setState({
-        pointsData: allLocations.features, 
+        pointsData: allLocations.features,
         allPointsData: allLocations.features
       });
       this.setCuisineFilterDropdown();
       return allLocations;
+    }
+
+    this.sideBarItemClickHandler = (id) => {
+      const currentLat = parseFloat(this.state.allPointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
+      const coordinates = this.state.allPointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
+      const popupIsPopped = document.querySelector('.mapboxgl-popup');
+      const flyParams = {
+        bearing: 0,
+        center: [currentLng, currentLat],
+        zoom: 14,
+        speed: 0.7,
+        pitch: 0
+      }
+
+      if (popupIsPopped) {
+        popupIsPopped.remove();
+      }
+
+      map.flyTo(flyParams);
+      setPopup(coordinates, currentRestaurantInfo, map);
     }
 
     map.on('load', function () {
@@ -121,49 +149,28 @@ class App extends Component {
           'text-anchor': 'top'
         }
       });
-
-      map.on('click', 'points', function (e) {
-        let coordinates = e.features[0].geometry.coordinates.slice();
-        let info = e.features[0].properties.info;
-
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        setPopup(coordinates, info, map);
-      });
-
-      // Change the cursor to a pointer when the mouse is over the places layer.
-      map.on('mouseenter', 'points', function () {
-        map.getCanvas().style.cursor = 'pointer';
-      });
-
-      // Change it back to a pointer when it leaves.
-      map.on('mouseleave', 'points', function () {
-        map.getCanvas().style.cursor = '';
-      });
     });
 
-    this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.state.allPointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
-      const coordinates = this.state.allPointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
-      const popupIsPopped = document.querySelector('.mapboxgl-popup');
-      const flyParams = {
-        bearing: 0,
-        center: [currentLng, currentLat],
-        zoom: 14,
-        speed: 0.7,
-        pitch: 0
+    map.on('click', 'points', function (e) {
+      let coordinates = e.features[0].geometry.coordinates.slice();
+      let info = e.features[0].properties.info;
+
+      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
       }
 
-      if (popupIsPopped) {
-        popupIsPopped.remove();
-      }
-      map.flyTo(flyParams);
-      setPopup(coordinates, currentRestaurantInfo, map);
-    }
+      setPopup(coordinates, info, map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'points', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'points', function () {
+      map.getCanvas().style.cursor = '';
+    });
   }
 
   render() {
