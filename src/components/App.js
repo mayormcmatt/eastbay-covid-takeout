@@ -33,7 +33,7 @@ class App extends Component {
 
     this.setCuisineFilterDropdown = () => {
       let results = [];
-      this.state.pointsData.map(e => {
+      this.state.pointsData.forEach(e => {
         if(!results.includes(e.properties.cuisine)) {
           results.push(e.properties.cuisine)
         }
