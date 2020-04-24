@@ -17,14 +17,23 @@ const setPopup = (c, i, m) => {
 
   return popup;
 }
+
+const setMarker = (c, m) => {
+  const marker = new mapboxgl.Marker()
+  .setLngLat(c)
+  .addTo(m);
+
+  return marker;
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       mapState: {
         lng: -122.25,
-        lat: 37.8,
-        zoom: 13
+        lat: 37.84,
+        zoom: 10.5
       },
       pointsData: [],
       allPointsData: [],
@@ -44,21 +53,38 @@ class App extends Component {
     return this.setState({dropdownItems: results})
   }
 
-  filterByCuisine = (cuisine) => {
-    const results = this.state.allPointsData.filter(item => {
-      return item.properties.cuisine === cuisine
-    });
-
-    this.setState({
-      pointsData: results,
-      cuisineApp: cuisine
-    })
+  clearPopups = () => {
+    const popupIsPopped = document.querySelector('.mapboxgl-popup');
+    if (popupIsPopped) {
+      popupIsPopped.remove();
+    }
   }
 
-  clearFilterHandler = () => {
-    const allPoints = this.state.allPointsData;
-    this.setState({pointsData: allPoints});
-    this.setState({cuisineApp: 'Search By Cuisine'});
+  clearMarkers = () => {
+    const allMarkers = document.querySelectorAll('.mapboxgl-marker');
+    allMarkers.forEach(e => { e.remove() });
+  }
+
+  displayMarkers = ( points, map ) => {
+    console.log("App -> displayMarkers -> map", map)
+    console.log("App -> displayMarkers -> points", points)
+    console.log("DISPLAYING MARKERS")
+
+    points.forEach(e => {
+      const currentCoord = e.geometry.coordinates;
+      setMarker(currentCoord, map);
+    });
+  }
+
+  updateFlyToView = (long, lat, zoom, map) => {
+    const flyParams = {
+      bearing: 0,
+      center: [long, lat],
+      zoom: zoom,
+      speed: 0.7,
+      pitch: 0
+    }
+    map.flyTo(flyParams);
   }
 
   componentDidMount() {
@@ -108,6 +134,8 @@ class App extends Component {
         allPointsData: allLocations.features
       });
       this.populateCuisineFilterDropdown();
+      this.displayMarkers( this.state.allPointsData, map);
+
       return allLocations;
     }
 
@@ -116,20 +144,9 @@ class App extends Component {
       const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
       const coordinates = this.state.allPointsData[id].geometry.coordinates;
       const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
-      const popupIsPopped = document.querySelector('.mapboxgl-popup');
-      const flyParams = {
-        bearing: 0,
-        center: [currentLng, currentLat],
-        zoom: 14,
-        speed: 0.7,
-        pitch: 0
-      }
 
-      if (popupIsPopped) {
-        popupIsPopped.remove();
-      }
-
-      map.flyTo(flyParams);
+      this.clearPopups();
+      this.updateFlyToView(currentLng, currentLat, 14, map);
       setPopup(coordinates, currentRestaurantInfo, map);
     }
 
@@ -139,21 +156,21 @@ class App extends Component {
         'data': provideDataPoints()
       });
 
-      map.addLayer({
-        'id': 'points',
-        'type': 'symbol',
-        'source': 'points',
-        'layout': {
-          // get the icon name from the source's "icon" property
-          // concatenate the name to get an icon from the style's sprite sheet
-          'icon-image': ['concat', ['get', 'icon'], '-15'],
-          'icon-size': 1.2,
-          'icon-allow-overlap': true,
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          'text-anchor': 'top'
-        }
-      });
+      // map.addLayer({
+      //   'id': 'points',
+      //   'type': 'symbol',
+      //   'source': 'points',
+      //   'layout': {
+      //     // get the icon name from the source's "icon" property
+      //     // concatenate the name to get an icon from the style's sprite sheet
+      //     'icon-image': ['concat', ['get', 'icon'], '-15'],
+      //     'icon-size': 1.2,
+      //     'icon-allow-overlap': true,
+      //     'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+      //     'text-offset': [0, 0.6],
+      //     'text-anchor': 'top'
+      //   }
+      // });
     });
 
     map.on('click', 'points', function (e) {
@@ -176,6 +193,32 @@ class App extends Component {
     map.on('mouseleave', 'points', function () {
       map.getCanvas().style.cursor = '';
     });
+
+    this.filterByCuisine = (cuisine) => {
+      const results = this.state.allPointsData.filter(item => {
+        return item.properties.cuisine === cuisine
+      });
+
+      this.setState({
+        pointsData: results,
+        cuisineApp: cuisine
+      })
+
+      this.clearPopups();
+      this.clearMarkers();
+      this.displayMarkers( results, map);
+      this.updateFlyToView(-122.25, 37.84, 10.5, map);
+    }
+
+    this.clearFilterHandler = () => {
+      const allPoints = this.state.allPointsData;
+      this.setState({pointsData: allPoints});
+      this.setState({cuisineApp: 'Search By Cuisine'});
+      this.clearPopups();
+      this.clearMarkers();
+      this.displayMarkers( allPoints, map);
+      this.updateFlyToView(-122.25, 37.84, 10.5, map);
+    }
   }
 
   render() {

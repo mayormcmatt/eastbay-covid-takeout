@@ -88,7 +88,7 @@ class Sidebar extends Component {
       <div className="sidebar-container">
         <div className="search-filter-container">
           <div className="clear-filter"
-            onClick={this.props.clearFilterHandler.bind(this)}>CLEAR</div>
+            onClick={this.props.clearFilterHandler}>CLEAR</div>
 
           <Search />
 
