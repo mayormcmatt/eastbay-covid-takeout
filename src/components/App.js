@@ -9,7 +9,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpc
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
 const setPopup = (c, i, m) => {
-  const popup = new mapboxgl.Popup()
+  const popup = new mapboxgl.Popup({ offset: 25 })
   .setLngLat(c)
   .setHTML(i)
   .setMaxWidth('320px')
@@ -18,9 +18,12 @@ const setPopup = (c, i, m) => {
   return popup;
 }
 
-const setMarker = (c, m) => {
+const setMarker = (c, i, m) => {
   const marker = new mapboxgl.Marker()
   .setLngLat(c)
+  .setPopup(new mapboxgl.Popup({ offset: 25 })
+    .setHTML(i)
+    .setMaxWidth('320px'))
   .addTo(m);
 
   return marker;
@@ -66,13 +69,10 @@ class App extends Component {
   }
 
   displayMarkers = ( points, map ) => {
-    console.log("App -> displayMarkers -> map", map)
-    console.log("App -> displayMarkers -> points", points)
-    console.log("DISPLAYING MARKERS")
-
     points.forEach(e => {
-      const currentCoord = e.geometry.coordinates;
-      setMarker(currentCoord, map);
+      const coordinates = e.geometry.coordinates;
+      const info = e.properties.info;
+      setMarker(coordinates, info, map);
     });
   }
 
@@ -173,16 +173,16 @@ class App extends Component {
       // });
     });
 
-    map.on('click', 'points', function (e) {
-      let coordinates = e.features[0].geometry.coordinates.slice();
-      let info = e.features[0].properties.info;
+    // map.on('click', 'points', function (e) {
+    //   let coordinates = e.features[0].geometry.coordinates.slice();
+    //   let info = e.features[0].properties.info;
 
-      while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-      }
+    //   while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    //     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    //   }
 
-      setPopup(coordinates, info, map);
-    });
+    //   setPopup(coordinates, info, map);
+    // });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
     map.on('mouseenter', 'points', function () {
