@@ -7,7 +7,8 @@ class Search extends Component {
       <div className="search">
         <input
           type="text"
-          placeholder="Search by restaurant name"
+          value={this.props.searchValue}
+          placeholder="Search By Restaurant Name"
           onChange={this.props.searchHandler}
         ></input>
       </div>
@@ -78,7 +79,9 @@ class Sidebar extends Component {
           <div className="clear-filter"
             onClick={this.props.clearFilterHandler}>CLEAR</div>
 
-          <Search searchHandler={this.props.searchHandler}/>
+          <Search 
+            searchValue={this.props.searchValue}
+            searchHandler={this.props.searchHandler}/>
           <Filter
             cuisine={this.props.cuisine}
             dropdownitems={this.props.dropdownitems}

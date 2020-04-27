@@ -41,6 +41,7 @@ class App extends Component {
       pointsData: [],
       allPointsData: [],
       dropdownItems: [],
+      searchValue: '',
       cuisineApp: 'Search By Cuisine'
     }
   }
@@ -201,6 +202,7 @@ class App extends Component {
 
       this.setState({
         pointsData: results,
+        searchValue: '',
         cuisineApp: cuisine
       })
 
@@ -212,8 +214,11 @@ class App extends Component {
 
     this.clearFilterHandler = () => {
       const allPoints = this.state.allPointsData;
-      this.setState({pointsData: allPoints});
-      this.setState({cuisineApp: 'Search By Cuisine'});
+      this.setState({
+        pointsData: allPoints,
+        searchValue: '',
+        cuisineApp: 'Search By Cuisine',
+      });
       this.clearPopups();
       this.clearMarkers();
       this.displayMarkers( allPoints, map);
@@ -226,7 +231,9 @@ class App extends Component {
         return item.properties.name.toLowerCase().match(searchInput);
       });
       this.setState({
-        pointsData: results
+        pointsData: results,
+        searchValue: e.target.value,
+        cuisineApp: 'Search By Cuisine'
       })
       this.clearPopups();
       this.clearMarkers();
@@ -247,6 +254,7 @@ class App extends Component {
           sideBarItemClickHandler={this.sideBarItemClickHandler}
           dropdownHandler={this.filterByCuisine}
           clearFilterHandler={this.clearFilterHandler}
+          searchValue={this.state.searchValue}
           searchHandler={this.searchHandler}  
         />
       </div>
