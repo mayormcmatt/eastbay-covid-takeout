@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
+import { connect } from 'react-redux';
+
 import 'mapbox-gl/dist/mapbox-gl.css';
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 import Sidebar from '../components/Sidebar.js';
@@ -18,56 +20,36 @@ const setPopup = (c, i, m) => {
   return popup;
 }
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mapState: {
-        lng: -122.25,
-        lat: 37.8,
-        zoom: 13
-      },
-      pointsData: [],
-      allPointsData: [],
-      dropdownItems: [],
-      cuisineApp: 'Search By Cuisine'
-    }
-  }
-
   populateCuisineFilterDropdown = () => {
     let results = [];
-    this.state.pointsData.forEach(e => {
+    this.props.pointsData.forEach(e => {
       if(!results.includes(e.properties.cuisine)) {
         results.push(e.properties.cuisine)
       }
     });
 
-    return this.setState({dropdownItems: results})
+    return this.props.setDropdownData(results);
   }
 
   filterByCuisine = (cuisine) => {
-    const results = this.state.allPointsData.filter(item => {
+    const results = this.props.allPointsData.filter(item => {
       return item.properties.cuisine === cuisine
     });
 
-    this.setState({
-      pointsData: results,
-      cuisineApp: cuisine
-    })
-  }
-
-  clearFilterHandler = () => {
-    const allPoints = this.state.allPointsData;
-    this.setState({pointsData: allPoints});
-    this.setState({cuisineApp: 'Search By Cuisine'});
+    // Send results of filter and cuisine type to Redux store
+    this.props.updateCuisineFilter(results, cuisine)
   }
 
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.state.mapState.lng, this.state.mapState.lat],
-      zoom: this.state.mapState.zoom
+      center: [this.props.mapState.lng, this.props.mapState.lat],
+      zoom: this.props.mapState.zoom
     });
+
+    // Sends instantiated map to Redux store
+    this.props.storeMap(map);
 
     const provideDataPoints = () => {
       let allLocations = {
@@ -103,19 +85,18 @@ class App extends Component {
         })
       });
 
-      this.setState({
-        pointsData: allLocations.features,
-        allPointsData: allLocations.features
-      });
+      // Send points data to Redux
+      this.props.setPointsData(allLocations.features, allLocations.features);
+
       this.populateCuisineFilterDropdown();
       return allLocations;
     }
 
     this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.state.allPointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
-      const coordinates = this.state.allPointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
+      const currentLat = parseFloat(this.props.allPointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.props.allPointsData[id].geometry.coordinates[0]);
+      const coordinates = this.props.allPointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.props.allPointsData[id].properties.info;
       const popupIsPopped = document.querySelector('.mapboxgl-popup');
       const flyParams = {
         bearing: 0,
@@ -179,20 +160,56 @@ class App extends Component {
   }
 
   render() {
+    // console.log(this.props.allPointsData)
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
 
         <Sidebar
-          cuisine={this.state.cuisineApp}
-          data={this.state.pointsData}
-          dropdownitems={this.state.dropdownItems}
+          cuisine={this.props.cuisineApp}
+          data={this.props.pointsData}
+          dropdownitems={this.props.dropdownItems}
           sideBarItemClickHandler={this.sideBarItemClickHandler}
           dropdownHandler={this.filterByCuisine}
-          clearFilterHandler={this.clearFilterHandler}/>
+          clearFilterHandler={this.props.clearFilters}/>
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    mapState: state.mapState,
+    pointsData: state.pointsData,
+    allPointsData: state.allPointsData,
+    dropdownItems: state.dropdownItems,
+    cuisineApp: state.cuisineApp,
+    map: state.map
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    storeMap: (map) => dispatch({
+      type: 'GETMAP',
+      payload: map
+    }),
+    setPointsData: (points, allPoints) => dispatch({
+      type: 'SETPOINTS',
+      payload: {points, allPoints}
+    }),
+    setDropdownData: (cuisines) => dispatch({
+      type: 'SETDROPDOWNCUISINES',
+      payload: cuisines
+    }),
+    updateCuisineFilter: (points, cuisine) => dispatch ({
+      type: 'UPDATECUISINEFILTER',
+      payload: {points, cuisine}
+    }),
+    clearFilters: () => dispatch({
+      type: 'CLEARFILTERS'
+    })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
