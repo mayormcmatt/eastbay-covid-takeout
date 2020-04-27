@@ -219,6 +219,20 @@ class App extends Component {
       this.displayMarkers( allPoints, map);
       this.updateFlyToView(-122.25, 37.84, 10.5, map);
     }
+
+    this.searchHandler = (e) => {
+      const searchInput = e.target.value.trim().toLowerCase();
+      const results = this.state.allPointsData.filter(item => {
+        return item.properties.name.toLowerCase().match(searchInput);
+      });
+      this.setState({
+        pointsData: results
+      })
+      this.clearPopups();
+      this.clearMarkers();
+      this.displayMarkers( results, map);
+      this.updateFlyToView(-122.25, 37.84, 10.5, map);
+    }
   }
 
   render() {
@@ -232,7 +246,9 @@ class App extends Component {
           dropdownitems={this.state.dropdownItems}
           sideBarItemClickHandler={this.sideBarItemClickHandler}
           dropdownHandler={this.filterByCuisine}
-          clearFilterHandler={this.clearFilterHandler}/>
+          clearFilterHandler={this.clearFilterHandler}
+          searchHandler={this.searchHandler}  
+        />
       </div>
     )
   }

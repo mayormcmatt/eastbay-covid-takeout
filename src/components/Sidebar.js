@@ -1,26 +1,14 @@
 import React, { Component } from 'react';
 import TakeoutList from '../components/TakeoutList.js';
 
-class Search extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchByName: ''
-    }
-  }
-
-  searchHandler = (e) => {
-    this.setState({searchByName: e.target.value});
-  }
-
+class Search extends Component {  
   render() {
     return (
       <div className="search">
         <input
           type="text"
-          value={this.state.searchByName}
           placeholder="Search by restaurant name"
-          onChange={this.searchHandler}
+          onChange={this.props.searchHandler}
         ></input>
       </div>
     )
@@ -90,8 +78,7 @@ class Sidebar extends Component {
           <div className="clear-filter"
             onClick={this.props.clearFilterHandler}>CLEAR</div>
 
-          <Search />
-
+          <Search searchHandler={this.props.searchHandler}/>
           <Filter
             cuisine={this.props.cuisine}
             dropdownitems={this.props.dropdownitems}
