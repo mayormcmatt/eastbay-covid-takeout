@@ -4,7 +4,7 @@
   height: 45vh;
   overflow: scroll;
   width: 100vw;
-  
+
   @include bp(m) {
     border-top: 0 solid black;
     height: calc(100vh - 180px);
@@ -15,28 +15,53 @@
     border-bottom: 2px solid #404442;
     cursor: pointer;
     margin-left: 0;
-    padding: 1rem 1rem 1rem 2rem;
-  
+    padding: 1rem;
+    overflow: hidden;
+
+    @include bp(s) {
+      padding: 1rem 1rem 1rem 2rem;
+    }
+
     h3 {
       // color: #27c375;
       color: #404442;
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-      margin-top: 0;
+      font-size: 1.4rem;
+      margin: 0 0 6px 0;
+
+      @include bp(s) {
+        font-size: 1.6rem;
+        margin: 0 0 9px 0;
+      }
+
+      @include bp(m) {
+        font-size: 1.8rem;
+        margin: 0 0 12px 0;
+      }
     }
-  
+
     p {
       // color: white;
       color: #404442;
-      margin-bottom: 4px;
-      margin-top: 8px;
+      margin: 0;
+
+      @include bp(s) {
+        margin: 4px 0;
+      }
+
+      @include bp(m) {
+        margin: 8px 0 4px;
+      }
     }
-  
+
     a {
       // color: #abb7b1;
       color: #404442;
       display: block;
-      margin-top: 20px;
+      margin: 6px 0 0 0;
+
+      @include bp(m) {
+        margin: 20px 0 0 0;
+      }
     }
   }
 
