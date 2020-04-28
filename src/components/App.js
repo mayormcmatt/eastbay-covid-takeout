@@ -255,7 +255,7 @@ class App extends Component {
           dropdownHandler={this.filterByCuisine}
           clearFilterHandler={this.clearFilterHandler}
           searchValue={this.state.searchValue}
-          searchHandler={this.searchHandler}  
+          searchHandler={this.searchHandler}
         />
       </div>
     )

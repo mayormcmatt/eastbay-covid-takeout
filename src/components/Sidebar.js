@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TakeoutList from '../components/TakeoutList.js';
 
-class Search extends Component {  
+class Search extends Component {
   render() {
     return (
       <div className="search">
@@ -9,7 +9,7 @@ class Search extends Component {
           type="text"
           value={this.props.searchValue}
           placeholder="Search By Restaurant Name"
-          onChange={this.props.searchHandler}
+          onChange={(e)=>this.props.searchHandler(e)}
         ></input>
       </div>
     )
@@ -79,7 +79,7 @@ class Sidebar extends Component {
           <div className="clear-filter"
             onClick={this.props.clearFilterHandler}>CLEAR</div>
 
-          <Search 
+          <Search
             searchValue={this.props.searchValue}
             searchHandler={this.props.searchHandler}/>
           <Filter
