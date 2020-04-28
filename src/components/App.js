@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import { connect } from 'react-redux';
+
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 import Sidebar from '../components/Sidebar.js';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 // TODO: Figure out how to use ENV variables to protect the Mapbox key
@@ -30,31 +32,15 @@ const setMarker = (c, i, m) => {
 }
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mapState: {
-        lng: -122.25,
-        lat: 37.84,
-        zoom: 10.5
-      },
-      pointsData: [],
-      allPointsData: [],
-      dropdownItems: [],
-      searchValue: '',
-      cuisineApp: 'Search By Cuisine'
-    }
-  }
-
   populateCuisineFilterDropdown = () => {
     let results = [];
-    this.state.pointsData.forEach(e => {
+    this.props.pointsData.forEach(e => {
       if(!results.includes(e.properties.cuisine)) {
         results.push(e.properties.cuisine)
       }
     });
 
-    return this.setState({dropdownItems: results})
+    return this.props.setDropdownData(results);
   }
 
   clearPopups = () => {
@@ -92,9 +78,11 @@ class App extends Component {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.state.mapState.lng, this.state.mapState.lat],
-      zoom: this.state.mapState.zoom
+      center: [this.props.mapState.lng, this.props.mapState.lat],
+      zoom: this.props.mapState.zoom
     });
+
+    this.props.storeMap(map);
 
     const provideDataPoints = () => {
       let allLocations = {
@@ -130,21 +118,21 @@ class App extends Component {
         })
       });
 
-      this.setState({
-        pointsData: allLocations.features,
-        allPointsData: allLocations.features
-      });
+      this.props.setPointsData(
+        allLocations.features,
+        allLocations.features
+      );
       this.populateCuisineFilterDropdown();
-      this.displayMarkers( this.state.allPointsData, map);
+      this.displayMarkers( this.props.allPointsData, map);
 
       return allLocations;
     }
 
     this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.state.allPointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.state.allPointsData[id].geometry.coordinates[0]);
-      const coordinates = this.state.allPointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.state.allPointsData[id].properties.info;
+      const currentLat = parseFloat(this.props.allPointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.props.allPointsData[id].geometry.coordinates[0]);
+      const coordinates = this.props.allPointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.props.allPointsData[id].properties.info;
 
       this.clearPopups();
       this.updateFlyToView(currentLng, currentLat, 14, map);
@@ -156,34 +144,7 @@ class App extends Component {
         'type': 'geojson',
         'data': provideDataPoints()
       });
-
-      // map.addLayer({
-      //   'id': 'points',
-      //   'type': 'symbol',
-      //   'source': 'points',
-      //   'layout': {
-      //     // get the icon name from the source's "icon" property
-      //     // concatenate the name to get an icon from the style's sprite sheet
-      //     'icon-image': ['concat', ['get', 'icon'], '-15'],
-      //     'icon-size': 1.2,
-      //     'icon-allow-overlap': true,
-      //     'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-      //     'text-offset': [0, 0.6],
-      //     'text-anchor': 'top'
-      //   }
-      // });
     });
-
-    // map.on('click', 'points', function (e) {
-    //   let coordinates = e.features[0].geometry.coordinates.slice();
-    //   let info = e.features[0].properties.info;
-
-    //   while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-    //     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-    //   }
-
-    //   setPopup(coordinates, info, map);
-    // });
 
     // Change the cursor to a pointer when the mouse is over the places layer.
     map.on('mouseenter', 'points', function () {
@@ -196,15 +157,12 @@ class App extends Component {
     });
 
     this.filterByCuisine = (cuisine) => {
-      const results = this.state.allPointsData.filter(item => {
+      const searchValue = '';
+      const results = this.props.allPointsData.filter(item => {
         return item.properties.cuisine === cuisine
       });
 
-      this.setState({
-        pointsData: results,
-        searchValue: '',
-        cuisineApp: cuisine
-      })
+      this.props.updateCuisineFilter(results, searchValue, cuisine);
 
       this.clearPopups();
       this.clearMarkers();
@@ -213,12 +171,8 @@ class App extends Component {
     }
 
     this.clearFilterHandler = () => {
-      const allPoints = this.state.allPointsData;
-      this.setState({
-        pointsData: allPoints,
-        searchValue: '',
-        cuisineApp: 'Search By Cuisine',
-      });
+      const allPoints = this.props.allPointsData;
+      this.props.clearFilters();
       this.clearPopups();
       this.clearMarkers();
       this.displayMarkers( allPoints, map);
@@ -227,14 +181,11 @@ class App extends Component {
 
     this.searchHandler = (e) => {
       const searchInput = e.target.value.trim().toLowerCase();
-      const results = this.state.allPointsData.filter(item => {
+      const results = this.props.allPointsData.filter(item => {
         return item.properties.name.toLowerCase().match(searchInput);
       });
-      this.setState({
-        pointsData: results,
-        searchValue: e.target.value,
-        cuisineApp: 'Search By Cuisine'
-      })
+
+      this.props.textSearch(results, e.target.value);
       this.clearPopups();
       this.clearMarkers();
       this.displayMarkers( results, map);
@@ -248,13 +199,13 @@ class App extends Component {
         <div ref={el => this.mapContainer = el} className='mapContainer' />
 
         <Sidebar
-          cuisine={this.state.cuisineApp}
-          data={this.state.pointsData}
-          dropdownitems={this.state.dropdownItems}
+          cuisine={this.props.cuisineApp}
+          data={this.props.pointsData}
+          dropdownitems={this.props.dropdownItems}
           sideBarItemClickHandler={this.sideBarItemClickHandler}
           dropdownHandler={this.filterByCuisine}
           clearFilterHandler={this.clearFilterHandler}
-          searchValue={this.state.searchValue}
+          searchValue={this.props.searchValue}
           searchHandler={this.searchHandler}
         />
       </div>
@@ -262,4 +213,43 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    mapState: state.mapState,
+    pointsData: state.pointsData,
+    allPointsData: state.allPointsData,
+    dropdownItems: state.dropdownItems,
+    cuisineApp: state.cuisineApp,
+    map: state.map
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    storeMap: (map) => dispatch({
+      type: 'GETMAP',
+      payload: map
+    }),
+    setPointsData: (points, allPoints) => dispatch({
+      type: 'SETPOINTS',
+      payload: {points, allPoints}
+    }),
+    setDropdownData: (cuisines) => dispatch({
+      type: 'SETDROPDOWNCUISINES',
+      payload: cuisines
+    }),
+    textSearch: (points, value) => dispatch({
+      type: 'TEXTSEARCH',
+      payload: {points, value}
+    }),
+    updateCuisineFilter: (points, value, cuisine) => dispatch ({
+      type: 'UPDATECUISINEFILTER',
+      payload: {points, value, cuisine}
+    }),
+    clearFilters: () => dispatch({
+      type: 'CLEARFILTERS'
+    })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (App);
