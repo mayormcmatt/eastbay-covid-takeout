@@ -8,10 +8,12 @@
   h1 {
     font-size: 1.6rem;
     font-weight: 400;
-    margin: .8rem;
+    line-height: 1.8rem;
+    margin: .6rem 1rem;
 
     @include bp(m) {
       font-size: 2rem;
+      line-height: 2rem;
       margin: 6px 15px;
     }
   }
