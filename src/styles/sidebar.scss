@@ -12,6 +12,7 @@
 
   .search-filter-container {
     background-color: #4a4a50;
+    height: 54px;
 
     @include bp(m) {
       height: 130px;
@@ -20,46 +21,79 @@
     }
 
     .clear-filter {
+      align-items: center;
+      background-color: white;
+      border-radius: 5px;
+      border: 2px solid #7B8585;
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      left: 74vw;
+      position: relative;
+      top: 8px;
+      width: 64px;
+      z-index: 3;
+
+      @include bp(s) {
+        left: 52vw;
+      }
+
       @include bp(m) {
-        align-items: center;
-        background-color: white;
         border: 5px solid #7B8585;
-        border-radius: 5px;
-        cursor: pointer;
-        display: flex;
         height: 60px;
-        justify-content: center;
-        position: absolute;
-        right: 50px;
+        left: 70%;
         top: 35px;
         width: 100px;
-        z-index: 3;
       }
     }
   }
 
   .search {
-    padding: 10px;
-    position: absolute;
-    width: 35vw;
+    left: 10px;
+    padding: 0;
+    position: relative;
+    top: -32px;
+    width: 70vw;
     z-index: 2;
+
+    @include bp(s) {
+      width: 50vw;
+    }
+
+    @include bp(m) {
+      left: 0;
+      padding: 10px;
+      top: -60px;
+      width: 35vw;
+    }
 
     input[type=text] {
       background-color: white;
-      border: 6px solid #7B8585;
+      border: 2px solid #7B8585;
       color: #7B8585;
       font-size: 15px;
-      height: 50px;
+      height: 40px;
       padding-left: 10px;
       position: relative;
       transition: 250ms;
       width: 100%;
+
+      @include bp(m) {
+        border: 6px solid #7B8585;
+        height: 50px;
+      }
     }
 
     input[type=text]:hover,
     input[type=text]:focus {
-      border: 6px solid #27c375;
+      border: 2px solid #27c375;
       outline: none;
+
+      @include bp(m) {
+        border: 6px solid #27c375;
+        outline: none;
+      }
     }
   }
 }

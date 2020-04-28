@@ -1,6 +1,10 @@
 .mapContainer {
-  height: calc(55vh - 60px);
+  height: calc(48vh - 60px);
   width: 100vw;
+
+  @include bp(s) {
+    height: calc(58vh - 60px);
+  }
 
   @include bp(m) {
     height: calc(100vh - 60px);
@@ -8,6 +12,11 @@
   }
 
   .mapboxgl-marker {
+    svg {
+      width: 24px;
+      height: auto;
+    }
+
     svg g g:nth-of-type(2) {
       fill: #27c375;
     }

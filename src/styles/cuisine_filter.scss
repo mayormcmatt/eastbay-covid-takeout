@@ -1,7 +1,13 @@
 .filter {
+  display: none;
   padding: 10px;
-  position: absolute;
+  position: relative;
   width: 35vw;
+
+  @include bp(m) {
+    display: block;
+    top: -130px;
+  }
 
   .dropdown-container {
     @include bp(m) {

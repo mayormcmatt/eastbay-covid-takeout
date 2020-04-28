@@ -1,14 +1,23 @@
 .mapboxgl-popup {
+  h2 {
+    margin: 0 0 8px 0;
+
+    @include bp(s) {
+      margin: 15px 0;
+    }
+  }
+
   p, a {
     color: #333;
-    display: none;
     font-size: 15px;
     line-height: 16px;
-    margin: 10px 0;
+    margin: 4px 0;
     overflow-wrap: break-word;
 
-    @include bp(m) {
-      display: flex;
+    @include bp(s) {
+      font-size: 15px;
+      line-height: 16px;
+      margin: 10px 0;
     }
   }
 }

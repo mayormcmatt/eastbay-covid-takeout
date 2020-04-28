@@ -10,6 +10,7 @@ const initialState = {
   allPointsData: [],
   dropdownItems: [],
   cuisineApp: 'Search By Cuisine',
+  searchValue: ''
 };
 
 const reducer = (state = initialState, action) => {
