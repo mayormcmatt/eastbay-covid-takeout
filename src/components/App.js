@@ -220,6 +220,7 @@ const mapStateToProps = state => {
     allPointsData: state.allPointsData,
     dropdownItems: state.dropdownItems,
     cuisineApp: state.cuisineApp,
+    searchValue: state.searchValue,
     map: state.map
   };
 };
