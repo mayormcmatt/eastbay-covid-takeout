@@ -1,30 +1,88 @@
 import React, { Component } from 'react';
 import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import { connect } from 'react-redux';
+
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
 import Sidebar from '../components/Sidebar.js';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
 // TODO: Figure out how to use ENV variables to protect the Mapbox key
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
+const setPopup = (c, i, m) => {
+  const popup = new mapboxgl.Popup({ offset: 25 })
+  .setLngLat(c)
+  .setHTML(i)
+  .setMaxWidth('320px')
+  .addTo(m);
+
+  return popup;
+}
+
+const setMarker = (c, i, m) => {
+  const marker = new mapboxgl.Marker()
+  .setLngLat(c)
+  .setPopup(new mapboxgl.Popup({ offset: 25 })
+    .setHTML(i)
+    .setMaxWidth('320px'))
+  .addTo(m);
+
+  return marker;
+}
+
 class App extends Component {
-  state = {
-    mapState: {
-      lng: -122.25,
-      lat: 37.8,
-      zoom: 13
-    },
-    pointsData: []
+  populateCuisineFilterDropdown = () => {
+    let results = [];
+    this.props.pointsData.forEach(e => {
+      if(!results.includes(e.properties.cuisine)) {
+        results.push(e.properties.cuisine)
+      }
+    });
+
+    return this.props.setDropdownData(results);
+  }
+
+  clearPopups = () => {
+    const popupIsPopped = document.querySelector('.mapboxgl-popup');
+    if (popupIsPopped) {
+      popupIsPopped.remove();
+    }
+  }
+
+  clearMarkers = () => {
+    const allMarkers = document.querySelectorAll('.mapboxgl-marker');
+    allMarkers.forEach(e => { e.remove() });
+  }
+
+  displayMarkers = ( points, map ) => {
+    points.forEach(e => {
+      const coordinates = e.geometry.coordinates;
+      const info = e.properties.info;
+      setMarker(coordinates, info, map);
+    });
+  }
+
+  updateFlyToView = (long, lat, zoom, map) => {
+    const flyParams = {
+      bearing: 0,
+      center: [long, lat],
+      zoom: zoom,
+      speed: 0.7,
+      pitch: 0
+    }
+    map.flyTo(flyParams);
   }
 
   componentDidMount() {
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [this.state.mapState.lng, this.state.mapState.lat],
-      zoom: this.state.mapState.zoom
+      center: [this.props.mapState.lng, this.props.mapState.lat],
+      zoom: this.props.mapState.zoom
     });
+
+    this.props.storeMap(map);
 
     const provideDataPoints = () => {
       let allLocations = {
@@ -33,7 +91,7 @@ class App extends Component {
       };
 
       locationData.map((el, i) => {
-        allLocations.features.push({
+        return allLocations.features.push({
           'type': 'Feature',
           'geometry': {
             'type': 'Point',
@@ -60,18 +118,25 @@ class App extends Component {
         })
       });
 
-      this.setState({pointsData: allLocations.features});
+      this.props.setPointsData(
+        allLocations.features,
+        allLocations.features
+      );
+      this.populateCuisineFilterDropdown();
+      this.displayMarkers( this.props.allPointsData, map);
+
       return allLocations;
     }
 
-    const setPopup = (c, i, m) => {
-      const popup = new mapboxgl.Popup()
-      .setLngLat(c)
-      .setHTML(i)
-      .setMaxWidth('320px')
-      .addTo(m);
+    this.sideBarItemClickHandler = (id) => {
+      const currentLat = parseFloat(this.props.allPointsData[id].geometry.coordinates[1]);
+      const currentLng = parseFloat(this.props.allPointsData[id].geometry.coordinates[0]);
+      const coordinates = this.props.allPointsData[id].geometry.coordinates;
+      const currentRestaurantInfo = this.props.allPointsData[id].properties.info;
 
-      return popup;
+      this.clearPopups();
+      this.updateFlyToView(currentLng, currentLat, 14, map);
+      setPopup(coordinates, currentRestaurantInfo, map);
     }
 
     map.on('load', function () {
@@ -79,64 +144,52 @@ class App extends Component {
         'type': 'geojson',
         'data': provideDataPoints()
       });
-
-      map.addLayer({
-        'id': 'points',
-        'type': 'symbol',
-        'source': 'points',
-        'layout': {
-          // get the icon name from the source's "icon" property
-          // concatenate the name to get an icon from the style's sprite sheet
-          'icon-image': ['concat', ['get', 'icon'], '-15'],
-          'icon-size': 1.2,
-          'icon-allow-overlap': true,
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          'text-anchor': 'top'
-        }
-      });
-
-      map.on('click', 'points', function (e) {
-        let coordinates = e.features[0].geometry.coordinates.slice();
-        let info = e.features[0].properties.info;
-
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        setPopup(coordinates, info, map);
-      });
-
-      // Change the cursor to a pointer when the mouse is over the places layer.
-      map.on('mouseenter', 'points', function () {
-        map.getCanvas().style.cursor = 'pointer';
-      });
-
-      // Change it back to a pointer when it leaves.
-      map.on('mouseleave', 'points', function () {
-        map.getCanvas().style.cursor = '';
-      });
     });
 
-    this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.state.pointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.state.pointsData[id].geometry.coordinates[0]);
-      const coordinates = this.state.pointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.state.pointsData[id].properties.info;
-      const popupIsPopped = document.querySelector('.mapboxgl-popup');
-      const flyParams = {
-        bearing: 0,
-        center: [currentLng, currentLat],
-        zoom: 14,
-        speed: 0.7,
-        pitch: 0
-      }
+    // Change the cursor to a pointer when the mouse is over the places layer.
+    map.on('mouseenter', 'points', function () {
+      map.getCanvas().style.cursor = 'pointer';
+    });
 
-      if (popupIsPopped) {
-        popupIsPopped.remove();
-      }
-      map.flyTo(flyParams);
-      setPopup(coordinates, currentRestaurantInfo, map);
+    // Change it back to a pointer when it leaves.
+    map.on('mouseleave', 'points', function () {
+      map.getCanvas().style.cursor = '';
+    });
+
+    this.filterByCuisine = (cuisine) => {
+      const searchValue = '';
+      const results = this.props.allPointsData.filter(item => {
+        return item.properties.cuisine === cuisine
+      });
+
+      this.props.updateCuisineFilter(results, searchValue, cuisine);
+
+      this.clearPopups();
+      this.clearMarkers();
+      this.displayMarkers( results, map);
+      this.updateFlyToView(-122.25, 37.84, 10.5, map);
+    }
+
+    this.clearFilterHandler = () => {
+      const allPoints = this.props.allPointsData;
+      this.props.clearFilters();
+      this.clearPopups();
+      this.clearMarkers();
+      this.displayMarkers( allPoints, map);
+      this.updateFlyToView(-122.25, 37.84, 10.5, map);
+    }
+
+    this.searchHandler = (e) => {
+      const searchInput = e.target.value.trim().toLowerCase();
+      const results = this.props.allPointsData.filter(item => {
+        return item.properties.name.toLowerCase().match(searchInput);
+      });
+
+      this.props.textSearch(results, e.target.value);
+      this.clearPopups();
+      this.clearMarkers();
+      this.displayMarkers( results, map);
+      this.updateFlyToView(-122.25, 37.84, 10.5, map);
     }
   }
 
@@ -144,10 +197,59 @@ class App extends Component {
     return (
       <div className="map-sidebar-container">
         <div ref={el => this.mapContainer = el} className='mapContainer' />
-        <Sidebar data={this.state.pointsData} sideBarItemClickHandler={this.sideBarItemClickHandler}/>
+
+        <Sidebar
+          cuisine={this.props.cuisineApp}
+          data={this.props.pointsData}
+          dropdownitems={this.props.dropdownItems}
+          sideBarItemClickHandler={this.sideBarItemClickHandler}
+          dropdownHandler={this.filterByCuisine}
+          clearFilterHandler={this.clearFilterHandler}
+          searchValue={this.props.searchValue}
+          searchHandler={this.searchHandler}
+        />
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    mapState: state.mapState,
+    pointsData: state.pointsData,
+    allPointsData: state.allPointsData,
+    dropdownItems: state.dropdownItems,
+    cuisineApp: state.cuisineApp,
+    map: state.map
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    storeMap: (map) => dispatch({
+      type: 'GETMAP',
+      payload: map
+    }),
+    setPointsData: (points, allPoints) => dispatch({
+      type: 'SETPOINTS',
+      payload: {points, allPoints}
+    }),
+    setDropdownData: (cuisines) => dispatch({
+      type: 'SETDROPDOWNCUISINES',
+      payload: cuisines
+    }),
+    textSearch: (points, value) => dispatch({
+      type: 'TEXTSEARCH',
+      payload: {points, value}
+    }),
+    updateCuisineFilter: (points, value, cuisine) => dispatch ({
+      type: 'UPDATECUISINEFILTER',
+      payload: {points, value, cuisine}
+    }),
+    clearFilters: () => dispatch({
+      type: 'CLEARFILTERS'
+    })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (App);

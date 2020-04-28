@@ -38,7 +38,7 @@
   {
       "city": "Albany",
       "coords": "37.888896,-122.298837",
-      "cuisine": "Cajun",
+      "cuisine": "Cajun/Creole",
       "lat": "37.888896",
       "long": "-122.298837",
       "name": "938 Crawfish",
@@ -134,7 +134,7 @@
   {
       "city": "Oakland",
       "coords": "37.79933,-122.254816",
-      "cuisine": "Coffee",
+      "cuisine": "Coffee and Tea",
       "lat": "37.79933",
       "long": "-122.254816",
       "name": "Akat Caf\u00e9",
@@ -158,7 +158,7 @@
   {
       "city": "Albany",
       "coords": "37.896866,-122.300835",
-      "cuisine": "Burgers",
+      "cuisine": "American",
       "lat": "37.896866",
       "long": "-122.300835",
       "name": "Al's Big Burger",
@@ -266,7 +266,7 @@
   {
       "city": "Oakland",
       "coords": "37.832104,-122.263088",
-      "cuisine": "Asian fusion",
+      "cuisine": "Asian",
       "lat": "37.832104",
       "long": "-122.263088",
       "name": "Azit",
@@ -350,7 +350,7 @@
   {
       "city": "Oakland",
       "coords": "37.809177,-122.273187",
-      "cuisine": "Asian,  Mexican, American",
+      "cuisine": "American",
       "lat": "37.809177",
       "long": "-122.273187",
       "name": "Belly",
@@ -542,7 +542,7 @@
   {
       "city": "Oakland",
       "coords": "37.789655,-122.196537",
-      "cuisine": "Mexican , American",
+      "cuisine": "Coffee and Tea",
       "lat": "37.789655",
       "long": "-122.196537",
       "name": "Cafe Santana",
@@ -566,7 +566,7 @@
   {
       "city": "Oakland",
       "coords": "37.826171,-122.25306",
-      "cuisine": "Italian , American",
+      "cuisine": "Italian",
       "lat": "37.826171",
       "long": "-122.25306",
       "name": "Caffe Chiave",
@@ -650,10 +650,10 @@
   {
       "city": "Oakland",
       "coords": "37.816688,-122.257355",
-      "cuisine": "Mexican-American",
+      "cuisine": "Mexican",
       "lat": "37.816688",
       "long": "-122.257355",
-      "name": "Chica Oakland",
+      "name": "CHICA Oakland",
       "phone": "510-735-9748",
       "street": "303a Oakland Ave.",
       "takeout_option": "Takeout and Delivery (call)",
@@ -686,7 +686,7 @@
   {
       "city": "Alameda",
       "coords": "37.763552,-122.243552",
-      "cuisine": "Latin American",
+      "cuisine": "Mexican",
       "lat": "37.763552",
       "long": "-122.243552",
       "name": "Cholita Linda",
@@ -698,7 +698,7 @@
   {
       "city": "Oakland",
       "coords": "37.836103,-122.262821",
-      "cuisine": "Latin-American",
+      "cuisine": "Mexican",
       "lat": "37.836103",
       "long": "-122.262821",
       "name": "Cholita Linda",
@@ -950,7 +950,7 @@
   {
       "city": "Alameda",
       "coords": "37.767823,-122.239552",
-      "cuisine": "American and Pizza",
+      "cuisine": "American",
       "lat": "37.767823",
       "long": "-122.239552",
       "name": "East End",
@@ -1190,7 +1190,7 @@
   {
       "city": "Oakland",
       "coords": "37.794543,-122.275699",
-      "cuisine": "Italian , American",
+      "cuisine": "Pizza",
       "lat": "37.794543",
       "long": "-122.275699",
       "name": "Forge Pizza",
@@ -1658,7 +1658,7 @@
   {
       "city": "Alameda",
       "coords": "37.766863,-122.241197",
-      "cuisine": "Diner",
+      "cuisine": "American",
       "lat": "37.766863",
       "long": "-122.241197",
       "name": "Jim's Coffee Shop",
@@ -1694,7 +1694,7 @@
   {
       "city": "Alameda",
       "coords": "37.761554,-122.245238",
-      "cuisine": "Coffee and Sandwich",
+      "cuisine": "American",
       "lat": "37.761554",
       "long": "-122.245238",
       "name": "Julie's",
@@ -1814,7 +1814,7 @@
   {
       "city": "Berkeley",
       "coords": "37.85758,-122.253378",
-      "cuisine": "Mediterranean, Middle East",
+      "cuisine": "Mediterranean",
       "lat": "37.85758",
       "long": "-122.253378",
       "name": "La Mediterranee",
@@ -1994,7 +1994,7 @@
   {
       "city": "Oakland",
       "coords": "37.827944,-122.259117",
-      "cuisine": "Italian , American",
+      "cuisine": "Pub",
       "lat": "37.827944",
       "long": "-122.259117",
       "name": "Magpie Taproom",
@@ -2066,7 +2066,7 @@
   {
       "city": "Alameda",
       "coords": "37.767128,-122.254424",
-      "cuisine": "Diner",
+      "cuisine": "American",
       "lat": "37.767128",
       "long": "-122.254424",
       "name": "Marti's Place",
@@ -2102,7 +2102,7 @@
   {
       "city": "Alameda",
       "coords": "37.767809,-122.240006",
-      "cuisine": "Pub, Sandwiches",
+      "cuisine": "Pub",
       "lat": "37.767809",
       "long": "-122.240006",
       "name": "McGee's",
@@ -2126,7 +2126,7 @@
   {
       "city": "Emeryville",
       "coords": "37.841483,-122.293687",
-      "cuisine": "Soul Food",
+      "cuisine": "Cajun/Creole",
       "lat": "37.841483",
       "long": "-122.293687",
       "name": "Minnie Bell's Soul Movement",
@@ -2186,7 +2186,7 @@
   {
       "city": "Alameda",
       "coords": "37.768392,-122.239082",
-      "cuisine": "Asian, Chicken Wings",
+      "cuisine": "Pub",
       "lat": "37.768392",
       "long": "-122.239082",
       "name": "Monkey King at the Brewery",
@@ -2198,7 +2198,7 @@
   {
       "city": "Alameda",
       "coords": "37.762974,-122.244071",
-      "cuisine": "Asian",
+      "cuisine": "Pub",
       "lat": "37.762974",
       "long": "-122.244071",
       "name": "Monkey King Pub & Grub",
@@ -2354,7 +2354,7 @@
   {
       "city": "Alameda",
       "coords": "37.76566,-122.241784",
-      "cuisine": "Diner",
+      "cuisine": "American",
       "lat": "37.76566",
       "long": "-122.241784",
       "name": "Ole's Waffle Shop",
@@ -2366,7 +2366,7 @@
   {
       "city": "Oakland",
       "coords": "37.84461,-122.252827",
-      "cuisine": "Californian-Italian",
+      "cuisine": "Italian",
       "lat": "37.84461",
       "long": "-122.252827",
       "name": "Oliveto",
@@ -2450,7 +2450,7 @@
   {
       "city": "Alameda",
       "coords": "37.764402,-122.242873",
-      "cuisine": "Hotdogs",
+      "cuisine": "American",
       "lat": "37.764402",
       "long": "-122.242873",
       "name": "Pampered Pup",
@@ -2534,7 +2534,7 @@
   {
       "city": "Oakland",
       "coords": "37.826531,-122.209608",
-      "cuisine": "Mediterranean , American",
+      "cuisine": "American",
       "lat": "37.826531",
       "long": "-122.209608",
       "name": "Perle Wine Bar",
@@ -2582,7 +2582,7 @@
   {
       "city": "Oakland",
       "coords": "37.791018,-122.197767",
-      "cuisine": "Cambodia",
+      "cuisine": "Cambodian",
       "lat": "37.791018",
       "long": "-122.197767",
       "name": "Phnom Penh House Restaurant",
@@ -2642,7 +2642,7 @@
   {
       "city": "Oakland",
       "coords": "37.836539,-122.261929",
-      "cuisine": "Italian, Pizza",
+      "cuisine": "Italian",
       "lat": "37.836539",
       "long": "-122.261929",
       "name": "Pizzaiolo",
@@ -2714,7 +2714,7 @@
   {
       "city": "Oakland",
       "coords": "37.814044,-122.292197",
-      "cuisine": "Breakfast, Lunch",
+      "cuisine": "American",
       "lat": "37.814044",
       "long": "-122.292197",
       "name": "Pretty Lady",
@@ -2918,7 +2918,7 @@
   {
       "city": "Oakland",
       "coords": "37.792059,-122.19938",
-      "cuisine": "Diner",
+      "cuisine": "American",
       "lat": "37.792059",
       "long": "-122.19938",
       "name": "Sequoia Diner",
@@ -3050,7 +3050,7 @@
   {
       "city": "Oakland",
       "coords": "37.824064,-122.255071",
-      "cuisine": "Coffee",
+      "cuisine": "Coffee and Tea",
       "lat": "37.824064",
       "long": "-122.255071",
       "name": "Snow White Coffee Bar",
@@ -3110,7 +3110,7 @@
   {
       "city": "Oakland",
       "coords": "37.796968,-122.182478",
-      "cuisine": "Burgers",
+      "cuisine": "American",
       "lat": "37.796968",
       "long": "-122.182478",
       "name": "Sparky's Giant Burgers",
@@ -3170,7 +3170,7 @@
   {
       "city": "Oakland",
       "coords": "37.779869,-122.229503",
-      "cuisine": "Laotian, Thai",
+      "cuisine": "Laotian",
       "lat": "37.779869",
       "long": "-122.229503",
       "name": "Sticky Rice Caf\u00e9",
@@ -3182,7 +3182,7 @@
   {
       "city": "Emeryville",
       "coords": "37.841094,-122.289892",
-      "cuisine": "Asian, Thai",
+      "cuisine": "Thai",
       "lat": "37.841094",
       "long": "-122.289892",
       "name": "Summer Summer Thai Eatery",
@@ -3350,7 +3350,7 @@
   {
       "city": "Oakland",
       "coords": "37.813566,-122.246965",
-      "cuisine": "Coffee",
+      "cuisine": "Coffee and Tea",
       "lat": "37.813566",
       "long": "-122.246965",
       "name": "The Coffee Mill",
@@ -3374,7 +3374,7 @@
   {
       "city": "Oakland",
       "coords": "37.814256,-122.265272",
-      "cuisine": "Brazilian, African",
+      "cuisine": "Brazilian",
       "lat": "37.814256",
       "long": "-122.265272",
       "name": "The Damel",
@@ -3410,7 +3410,7 @@
   {
       "city": "Oakland",
       "coords": "37.803112,-122.268604",
-      "cuisine": "Bar Food",
+      "cuisine": "Bar",
       "lat": "37.803112",
       "long": "-122.268604",
       "name": "The Kon-Tiki",
@@ -3482,7 +3482,7 @@
   {
       "city": "Berkeley",
       "coords": "37.870316,-122.266093",
-      "cuisine": "Breakfast",
+      "cuisine": "American",
       "lat": "37.870316",
       "long": "-122.266093",
       "name": "The Sunny Side Caf\u00e9",
@@ -3506,7 +3506,7 @@
   {
       "city": "Oakland",
       "coords": "37.839402,-122.262293",
-      "cuisine": "Caf\u00e9",
+      "cuisine": "American",
       "lat": "37.839402",
       "long": "-122.262293",
       "name": "The Well Organic Kitchen",
@@ -3542,7 +3542,7 @@
   {
       "city": "Emeryville",
       "coords": "37.834291,-122.280678",
-      "cuisine": "Soul Food",
+      "cuisine": "Cajun/Creole",
       "lat": "37.834291",
       "long": "-122.280678",
       "name": "Touch of Soul",
@@ -3578,7 +3578,7 @@
   {
       "city": "Oakland",
       "coords": "37.811507,-122.264025",
-      "cuisine": "Burgers",
+      "cuisine": "American",
       "lat": "37.811507",
       "long": "-122.264025",
       "name": "TrueBurger",
@@ -3626,7 +3626,7 @@
   {
       "city": "Emeryville",
       "coords": "37.830146,-122.279355",
-      "cuisine": "Lebanese,  Mediterranean",
+      "cuisine": "Mediterranean",
       "lat": "37.830146",
       "long": "-122.279355",
       "name": "Wally's Caf\u00e9",
@@ -3686,7 +3686,7 @@
   {
       "city": "Oakland",
       "coords": "37.806701,-122.272355",
-      "cuisine": "Southern",
+      "cuisine": "American",
       "lat": "37.806701",
       "long": "-122.272355",
       "name": "World Famous Hotboys",
@@ -3806,7 +3806,7 @@
   {
       "city": "Berkeley",
       "coords": "37.89169,-122.278533",
-      "cuisine": "Pizzeria",
+      "cuisine": "Pizza",
       "lat": "37.89169",
       "long": "-122.278533",
       "name": "Zachary's Chicago Pizza",

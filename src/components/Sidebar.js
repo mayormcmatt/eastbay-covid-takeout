@@ -1,49 +1,97 @@
 import React, { Component } from 'react';
+import TakeoutList from '../components/TakeoutList.js';
 
-class Takeout extends Component {
+class Search extends Component {
   render() {
-    if (this.props.data) {
-      const { properties } = this.props.data;
-      const id = properties.id;
-      return (
-        <div className="takeout" id={id} onClick={this.props.sideBarItemClickHandler.bind(this, id)}>
-          <h3>{properties.name}</h3>
-          <p>{properties.takeout_option}</p>
-          <p><strong>Cuisine: </strong>{properties.cuisine}</p>
-          <p><strong>Address: </strong>{properties.street}, {properties.city}</p>
-          <p><strong>Phone: </strong>{properties.phone}</p>
-          <a href={properties.website} target="_blank" rel="noopener noreferrer"> {properties.website}</a>
-        </div>
-      )
-    } else {
-      return (
-        <div></div>
-      )
-    }
+    return (
+      <div className="search">
+        <input
+          type="text"
+          value={this.props.searchValue}
+          placeholder="Search By Restaurant Name"
+          onChange={(e)=>this.props.searchHandler(e)}
+        ></input>
+      </div>
+    )
   }
 }
 
-class TakeoutList extends Component {
-  render() {
-    if (this.props.data) {
-      return (
-        this.props.data.map((takeout, i) => (
-          <Takeout key={i} data={takeout} sideBarItemClickHandler={this.props.sideBarItemClickHandler} />
-        ))
-      )
-    } else {
-      return (
-        <div></div>
-      )
+class DropdownItems extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      menuViz: false
     }
+  }
+
+  showMenu = () => {
+    const doesShow = this.state.menuViz;
+    this.setState({menuViz: !doesShow});
+  }
+
+  // On click, take value of dropdown item
+  // Send that up to App and/or trigger function
+  // Filter pointsData in App based on value
+  render() {
+    return (
+      <div className="description" onClick={this.showMenu}>
+        {this.props.cuisine}
+        {this.state.menuViz ? (
+          <ul className="dropdown-list">
+            {this.props.dropdownitems.map((item, i) => {
+              return (
+                <li
+                  className="dropdown-list__item"
+                  key={i}
+                  onClick={this.props.dropdownHandler.bind(this, item)}
+                >{item}</li>
+              )
+            })}
+          </ul>
+        ): (null)}
+      </div>
+    )
+  }
+}
+
+class Filter extends Component {
+  render() {
+    return (
+      <div className="filter">
+        <div className="dropdown-container">
+          <DropdownItems
+            cuisine={this.props.cuisine}
+            dropdownitems={this.props.dropdownitems}
+            dropdownHandler={this.props.dropdownHandler}
+          />
+        </div>
+      </div>
+    )
   }
 }
 
 class Sidebar extends Component {
   render() {
     return (
-      <div className="sidebar">
-        <TakeoutList data={this.props.data} sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
+      <div className="sidebar-container">
+        <div className="search-filter-container">
+          <div className="clear-filter"
+            onClick={this.props.clearFilterHandler}>CLEAR</div>
+
+          <Search
+            searchValue={this.props.searchValue}
+            searchHandler={this.props.searchHandler}/>
+          <Filter
+            cuisine={this.props.cuisine}
+            dropdownitems={this.props.dropdownitems}
+            dropdownHandler={this.props.dropdownHandler}
+          />
+        </div>
+
+        <TakeoutList
+          data={this.props.data}
+          sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
       </div>
     )
   }
