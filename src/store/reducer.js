@@ -2,8 +2,8 @@
 const initialState = {
   mapState: {
     lng: -122.25,
-    lat: 37.8,
-    zoom: 10.5
+    lat: 37.84,
+    zoom: 11.5
   },
   map: {},
   pointsData: [],
