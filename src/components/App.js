@@ -10,16 +10,6 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpc
 // TODO: Figure out how to use ENV variables to protect the Mapbox key
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
 
-const setPopup = (c, i, m) => {
-  const popup = new mapboxgl.Popup({ offset: 25 })
-  .setLngLat(c)
-  .setHTML(i)
-  .setMaxWidth('320px')
-  .addTo(m);
-
-  return popup;
-}
-
 const setMarker = (c, i, m) => {
   const marker = new mapboxgl.Marker()
   .setLngLat(c)
@@ -126,17 +116,6 @@ class App extends Component {
       this.displayMarkers( this.props.allPointsData, map);
 
       return allLocations;
-    }
-
-    this.sideBarItemClickHandler = (id) => {
-      const currentLat = parseFloat(this.props.allPointsData[id].geometry.coordinates[1]);
-      const currentLng = parseFloat(this.props.allPointsData[id].geometry.coordinates[0]);
-      const coordinates = this.props.allPointsData[id].geometry.coordinates;
-      const currentRestaurantInfo = this.props.allPointsData[id].properties.info;
-
-      this.clearPopups();
-      this.updateFlyToView(currentLng, currentLat, 14, map);
-      setPopup(coordinates, currentRestaurantInfo, map);
     }
 
     map.on('load', function () {

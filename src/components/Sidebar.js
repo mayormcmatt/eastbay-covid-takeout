@@ -89,9 +89,7 @@ class Sidebar extends Component {
           />
         </div>
 
-        <TakeoutList
-          data={this.props.data}
-          sideBarItemClickHandler={this.props.sideBarItemClickHandler}/>
+        <TakeoutList />
       </div>
     )
   }
