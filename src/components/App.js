@@ -3,12 +3,32 @@ import mapboxgl from 'mapbox-gl';
 import { connect } from 'react-redux';
 
 import locationData from '../data/East_Bay_Restaurants_Guide_Takeout.json'
-import Sidebar from '../components/Sidebar.js';
+import Sidebar from './sidebar/Sidebar.js';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWF5b3JtY21hdHQiLCJhIjoiY2s5MDgzcTZ3MjB3YzNpcHJzanljMGNicyJ9.8hQc0WzOgTwFTwzv2AZUTw';
+
 // TODO: Figure out how to use ENV variables to protect the Mapbox key
 // mapboxgl.accessToken = 'process.env.REACT_APP_MAPBOX_KEY';
+
+// App Component Architecture:
+
+// TakeoutListItem   DropdownItems
+//        |               |
+//        |               |
+//  TakeoutList         Filter    Search
+//        \               /         /
+//          \           /         /
+//             Sidebar-----------
+//                |
+//                |
+//               App
+//                |
+//                |
+//              Layout----Header
+//                |
+//                |
+//              index
 
 const setMarker = (c, i, m) => {
   const marker = new mapboxgl.Marker()

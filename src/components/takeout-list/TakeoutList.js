@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import TakeoutListItem from '../components/TakeoutListItem.js';
+import TakeoutListItem from './TakeoutListItem';
 
 class TakeoutList extends Component {
   render() {
