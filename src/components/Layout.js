@@ -1,7 +1,7 @@
 import React from 'react';
 
 import App from './App';
-import Header from './Header'
+import Header from './header/Header'
 
 import '../styles/main.scss';
 
