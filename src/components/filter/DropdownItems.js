@@ -5,13 +5,23 @@ class DropdownItems extends Component {
     super();
 
     this.state = {
-      menuViz: false
+      menuViz: false,
+      show: ''
+    }
+  }
+
+  animateMenu = () => {
+    if (this.state.menuViz) {
+      this.setState({show: 'show'});
+    } else {
+      this.setState({show: ''});
     }
   }
 
   showMenu = () => {
     const doesShow = this.state.menuViz;
     this.setState({menuViz: !doesShow});
+    this.animateMenu();
   }
 
   // On click, take value of dropdown item
@@ -21,19 +31,18 @@ class DropdownItems extends Component {
     return (
       <div className="description" onClick={this.showMenu}>
         {this.props.cuisine}
-        {this.state.menuViz ? (
-          <ul className="dropdown-list">
-            {this.props.dropdownitems.map((item, i) => {
-              return (
-                <li
-                  className="dropdown-list__item"
-                  key={i}
-                  onClick={this.props.dropdownHandler.bind(this, item)}
-                >{item}</li>
-              )
-            })}
-          </ul>
-        ): (null)}
+        <ul className={`dropdown-list ${this.state.show}`}>
+          {this.props.dropdownitems.map((item, i) => {
+            return (
+              <li
+                className="dropdown-list__item"
+                key={i}
+                onClick={this.props.dropdownHandler.bind(this, item)}
+              >{item}</li>
+            )
+          })}
+        </ul>
+
       </div>
     )
   }

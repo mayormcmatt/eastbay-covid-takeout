@@ -49,7 +49,7 @@ class App extends Component {
         results.push(e.properties.cuisine)
       }
     });
-
+    results.sort();
     return this.props.setDropdownData(results);
   }
 
