@@ -1,27 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class DropdownItems extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      menuViz: false,
-      show: ''
-    }
-  }
-
-  animateMenu = () => {
-    if (this.state.menuViz) {
-      this.setState({show: 'show'});
-    } else {
-      this.setState({show: ''});
-    }
-  }
-
   showMenu = () => {
-    const doesShow = this.state.menuViz;
-    this.setState({menuViz: !doesShow});
-    this.animateMenu();
+    const doesShow = this.props.menuViz;
+    this.props.menuViz ?
+        this.props.showMenu(!doesShow, 'show-cuisines') :
+        this.props.showMenu(!doesShow, '');
   }
 
   // On click, take value of dropdown item
@@ -31,7 +16,7 @@ class DropdownItems extends Component {
     return (
       <div className="description" onClick={this.showMenu}>
         {this.props.cuisine}
-        <ul className={`dropdown-list ${this.state.show}`}>
+        <ul className={`dropdown-list ${this.props.showCuisines}`}>
           {this.props.dropdownitems.map((item, i) => {
             return (
               <li
@@ -42,10 +27,25 @@ class DropdownItems extends Component {
             )
           })}
         </ul>
-
       </div>
     )
   }
 }
 
-export default DropdownItems;
+const mapStateToProps = state => {
+  return {
+    menuViz: state.menuViz,
+    showCuisines: state.showCuisines
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    showMenu: (toggleMenu, show) => dispatch({
+      type: 'SHOWCUISINEDROPDOWN',
+      payload: {toggleMenu, show}
+    })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (DropdownItems);
