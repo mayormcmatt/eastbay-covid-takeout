@@ -10,7 +10,9 @@ const initialState = {
   allPointsData: [],
   dropdownItems: [],
   cuisineApp: 'Search By Cuisine',
-  searchValue: ''
+  searchValue: '',
+  menuViz: false,
+  showCuisines: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -36,7 +38,9 @@ const reducer = (state = initialState, action) => {
         ...state,
         pointsData: action.payload.points,
         searchValue: action.payload.value,
-        cuisineApp: 'Search By Cuisine'
+        cuisineApp: 'Search By Cuisine',
+        menuViz: false,
+        showCuisines: ''
       }
     case 'UPDATECUISINEFILTER':
       return {
@@ -47,12 +51,19 @@ const reducer = (state = initialState, action) => {
       }
     case 'CLEARFILTERS':
       const allPoints = state.allPointsData;
-
       return {
         ...state,
         pointsData: allPoints,
         searchValue: '',
-        cuisineApp: 'Search By Cuisine'
+        cuisineApp: 'Search By Cuisine',
+        menuViz: false,
+        showCuisines: ''
+      }
+    case 'SHOWCUISINEDROPDOWN':
+      return {
+        ...state,
+        menuViz: action.payload.toggleMenu,
+        showCuisines: action.payload.show
       }
     default:
       return state
